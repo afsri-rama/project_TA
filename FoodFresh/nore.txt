@@ -1,0 +1,108 @@
+database
+--------
+
+level
+------
+id
+nama_level
+deskripsi_level
+
+user
+----
+id
+email
+username
+password
+id_level
+api_key
+
+kategori
+---------
+id
+nama_kategori
+
+distributor
+-----------
+id
+nama_disributor
+wa_distributor
+deskripsi_disributor
+
+produk
+------
+id
+id_kategori
+nama_produk
+harga_produk
+deskripsi
+id_distributor
+
+
+kurir
+------
+id
+nama_kurir
+no_wa_kurir
+deskripsi_kurir
+
+konsumen
+--------
+id
+id_user
+nama_konsumen
+alamat_konsumen
+no_wa_konsumen
+
+
+keranjang
+----------
+id
+id_kostumer
+id_produk
+total_produk
+status_belajan
+=> [
+    0 => cencel
+    1 => masukan produk ke keranjang,
+    2 => pilih,
+    3 => menunggu pembayaran,
+    4 => telah pembayaran,
+]
+
+// ketika di klik lakukan pembayaran otomatis create data table pembayaran
+// notifikasi ke android
+
+
+//batal pembayaran delete data pembayaran berdaskan id id_kostumer
+//ubah status di keranajang dengan id_kostumer yang status_belajan menjadi cencel
+
+pembayaran
+-----------
+id
+id_kostumer
+total_pemayaran
+status_pembayaran
+=> [
+    0 => belum melkuakn pembayaran
+    1 => telah malakukan pembayaran => ketika telah di bayar auto ubah status keranajang menjadi cencel
+]
+status_delete
+=> [
+    0 => belum di delete
+    1 => telah di delete
+]
+
+pemesanana
+-----------
+id
+id_pembayaran
+id_kurir
+status_kurir
+=> [
+    0 => sedang jemput,
+    1 => sedang antar,
+    2 => selesai
+]
+
+
+
