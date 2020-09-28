@@ -48,20 +48,18 @@ class PembayaranAdminController extends Controller
 
         $pemesananCreate=[
             'id_pembayaran'=> $idPembayaran,
-            'tgl_pemesanan'=>$tglPemesanan,
+            'tgl_pemesanan'=> $tglPemesanan,
             'status_pemesanan'=>$statusPemesanan
         ];
 
         $pemesanan = Pemesanan::create($pemesananCreate);
 
-        $user = Auth::user();
-        $konsumen = $user->konsumen;
-        $keranjang=Keranjang::where('id_konsumen', $konsumen->id)->where('status_produk', Keranjang::$STATUS_PEMBAYARAN)->get();
+        $keranjang=Keranjang::where('id_konsumen', $pembayaran->id_konsumen)->where('status_produk', Keranjang::$STATUS_PEMBAYARAN)->get();
 
 
         foreach ($keranjang as $key => $value) {
             $pembelian = Pembelian::create([
-                'id_konsumen' => $konsumen->id,
+                'id_konsumen' => $pembayaran->id_konsumen,
                 'id_keranjang' => $value->id,
                 'id_pembayaran' => $pembayaran->id
             ]);

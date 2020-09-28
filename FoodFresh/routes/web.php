@@ -1,5 +1,6 @@
 <?php
 
+use App\Level;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,7 +28,7 @@ Route::resource('produk_konsumen', 'ProdukKonumenController');
 Route::resource('kategori_konsumen', 'KategoriKonsumenController');
 Route::get('/detail/{idProduk}', 'DetailProdukController@getDetail')->name('detail.getDetail');
 
-Route::group(['middleware' => ['auth']], function () {
+Route::group(['middleware' => ['auth', 'level-rule:'.Level::$LEVEL_KONSUMEN]], function () {
     Route::put('/checkout/pesan', 'CheckoutController@pesan')->name('checkout.pesan');
     Route::resource('checkout', 'CheckoutController');
     Route::resource('keranjang', 'KeranjangController');
@@ -40,7 +41,7 @@ Route::group(['middleware' => ['auth']], function () {
 });
 
 
-Route::group(['middleware' => ['auth']], function () {
+Route::group(['middleware' => ['auth', 'level-rule:' . Level::$LEVEL_ADMIN]], function () {
     Route::group(['prefix' => 'admin'], function () {
         Route::get('/', function () {
             return view('admin.welcome');
