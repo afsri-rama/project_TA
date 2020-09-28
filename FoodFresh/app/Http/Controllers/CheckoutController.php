@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Keranjang;
+use App\Pembelian;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 

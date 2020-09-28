@@ -6,6 +6,7 @@ use App\Keranjang;
 use App\Konsumen;
 use App\Pembayaran;
 use App\Pembelian;
+use App\Pemesanan;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -17,8 +18,7 @@ class PembelianController extends Controller
         return view('admin.pembelian.show', compact('pembelian'));
     }
     public function show($id){
-        $pembelian = Pembelian::where('id_pembayaran', $id)->get();
-
+        $pembelian = Pembayaran::find($id)->pembelian;
         return view('admin.pembelian.show', compact('pembelian'));
     }
 }

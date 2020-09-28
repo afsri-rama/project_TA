@@ -12,4 +12,8 @@ class Distributor extends Model
         'wa_distributor',
         'des_distributor',
     ];
+
+    public function produk(){
+        return $this->hasMany('App\Produk', 'id_distributor');
+    }
 }

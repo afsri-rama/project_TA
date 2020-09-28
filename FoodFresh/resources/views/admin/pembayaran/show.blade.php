@@ -30,7 +30,9 @@
                     <td> {{$item->tgl_pembayaran}} </td>
                     <td> <img src="{{asset('app/'. $item->bukti_pembayaran)}}"  width="50px" height="50px" alt="{{ $item->konsumen->nama_konsumen }}"></td>
                     <td> {{$item->status_pembayaran ? 'Terkonfirmasi' : 'Belum Terkonfimrasi'}} </td>
-                    <td> <form action="{{route('pembayaran_admin.konfirmasi', $item->id)}}" method="post">
+                    <td> 
+                        <a href="{{route('pembelian.show', $item->id)}}" class="btn btn-xs btn-info"> Detail Pemesanan </a>
+                        <form action="{{route('pembayaran_admin.konfirmasi', $item->id)}}" method="post">
                                 @csrf
                                 @method('PUT')
                             <button type="submit" class="btn btn-xs btn-info">Konfirmasi</button>

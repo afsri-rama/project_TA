@@ -25,4 +25,8 @@ class Pembayaran extends Model
     {
         return $this->belongsTo('App\Keranjang', 'id_keranjang');
     }
+
+    public function pembelian(){
+        return $this->hasMany('App\Pembelian', 'id_pembayaran');
+    }
 }

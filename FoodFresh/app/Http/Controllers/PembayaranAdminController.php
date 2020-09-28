@@ -54,16 +54,15 @@ class PembayaranAdminController extends Controller
 
         $pemesanan = Pemesanan::create($pemesananCreate);
 
-        $keranjang=Keranjang::where('id_konsumen', $pembayaran->id_konsumen)->where('status_produk', Keranjang::$STATUS_PEMBAYARAN)->get();
+        // $keranjang=Keranjang::where('id_konsumen', $pembayaran->id_konsumen)->where('status_produk', Keranjang::$STATUS_PEMBAYARAN)->get();
 
-
-        foreach ($keranjang as $key => $value) {
-            $pembelian = Pembelian::create([
-                'id_konsumen' => $pembayaran->id_konsumen,
-                'id_keranjang' => $value->id,
-                'id_pembayaran' => $pembayaran->id
-            ]);
-        }
+        // foreach ($keranjang as $key => $value) {
+        //     $pembelian = Pembelian::create([
+        //         'id_konsumen' => $pembayaran->id_konsumen,
+        //         'id_keranjang' => $value->id,
+        //         'id_pembayaran' => $pembayaran->id
+        //     ]);
+        // }
 
 
         return redirect()->route('pembayaran_admin.index')->withSuccess('Berhasil Konfirmasi Pembayaran ');

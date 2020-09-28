@@ -12,4 +12,8 @@ class Kurir extends Model
         'wa_kurir',
         'des_kurir',
     ];
+
+    public function pemesanan(){
+        return $this->hasMany('App\Pemesanan', 'id_kurir') ;
+    }
 }

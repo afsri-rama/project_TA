@@ -28,7 +28,6 @@
                     <td> {{$item->status_pemesanan ? 'Selesai' : 'Proses'}} </td>
                     <td>
                         <a href="{{route('pemesanan.edit', $item->id)}}" class="btn btn-xs btn-info"> ✏ EDIT </a>
-                        <a href="{{route('pembelian.show', $item->id_pembayaran)}}" class="btn btn-xs btn-info"> ✏ Detail Pemesanan </a>
                     </td>
                 </tr>
             @endforeach

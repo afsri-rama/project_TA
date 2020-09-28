@@ -103,20 +103,18 @@ class KonfirmasiController extends Controller
         // if(isset($pembayaran)) return redirect()->route('produk_konsumen.index')->withSuccess('PEMBAYARAN TERKONFIRMASI');
 
         $pembayaran = Pembayaran::create($dataCreate);
-        // {}
         $keranjang = Keranjang::where('id_konsumen', $konsumen->id)->where('status_produk', Keranjang::$STATUS_MENUNGGU_PEMBAYARAN);
 
-        $statusProdukKeranjang = Keranjang::$STATUS_PEMBAYARAN ;
+        foreach ($keranjang->get() as $key => $value) {
+            $pembelian = Pembelian::create([
+                'id_konsumen'=> $idKonsumen,
+                'id_keranjang'=> $value->id,
+                'id_pembayaran'=> $pembayaran->id
+            ]);
+        }
+
+        $statusProdukKeranjang = Keranjang::$STATUS_PEMBAYARAN;
         $keranjang->update(['status_produk' => $statusProdukKeranjang ]);
-
-        // foreach ($keranjang->get() as $key => $value) {
-        //     $pembelian = Pembelian::create([
-        //         'id_konsumen'=> $idKonsumen,
-        //         'id_keranjang'=> $value->id,
-        //         'id_pembayaran'=> $pembayaran->id
-        //     ]);
-        // }
-
         return redirect()->route('produk_konsumen.index')->withSuccess('PEMBAYARAN TERKONFIRMASI');
     }
 
