@@ -12,7 +12,7 @@
                 <th> Nama Kurir </th>
                 <th> Status Pesanan </th>
                 <th> Aksi</th>
-                <th>  </th>
+                <th> </th>
             </tr>
         </thead>
         <tbody>
@@ -26,7 +26,10 @@
                     <td> {{$item->tgl_pemesanan}} </td>
                     <td> {{{$item->kurir->nama_kurir ?? 'Pilih Kurir'}}} </td>
                     <td> {{$item->status_pemesanan ? 'Selesai' : 'Proses'}} </td>
-                    <td><a href="{{route('pemesanan.edit', $item->id)}}" class="btn btn-xs btn-info"> ✏ EDIT </a></td>
+                    <td>
+                        <a href="{{route('pemesanan.edit', $item->id)}}" class="btn btn-xs btn-info"> ✏ EDIT </a>
+                        <a href="{{route('pembelian.show', $item->id_pembayaran)}}" class="btn btn-xs btn-info"> ✏ Detail Pemesanan </a>
+                    </td>
                 </tr>
             @endforeach
         </tbody>

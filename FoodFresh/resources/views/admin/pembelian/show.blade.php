@@ -10,7 +10,6 @@
                 <th> Nama Konsumen </th>
                 <th> Nama Produk</th>
                 <th> Jumlah Produk</th>
-                <th>  </th>
             </tr>
         </thead>
         <tbody>

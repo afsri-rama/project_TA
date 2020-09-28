@@ -83,13 +83,6 @@
             </a>
         </li>
 
-        <li class="nav-item has-treeview">
-            <a href="{{route('pembelian.index')}}" class="nav-link">
-                <i></i>
-                <p>Pembelian</p>
-            </a>
-        </li>
-
 
         <li class="nav-item has-treeview">
             <a href="{{route('logout')}}" class="nav-link">

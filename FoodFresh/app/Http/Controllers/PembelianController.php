@@ -16,4 +16,9 @@ class PembelianController extends Controller
 
         return view('admin.pembelian.show', compact('pembelian'));
     }
+    public function show($id){
+        $pembelian = Pembelian::where('id_pembayaran', $id)->get();
+
+        return view('admin.pembelian.show', compact('pembelian'));
+    }
 }
