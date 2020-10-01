@@ -46,8 +46,6 @@ public class Login extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_login);
 
-        Auth.loginRedirect(Login.this);
-
         username = findViewById(R.id.editUser);
         password = findViewById(R.id.editPass);
         btnlogin = findViewById(R.id.btn_login);

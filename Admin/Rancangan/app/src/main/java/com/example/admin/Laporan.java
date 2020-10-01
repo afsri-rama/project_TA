@@ -67,9 +67,9 @@ public class Laporan extends AppCompatActivity {
                 listLap.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                        Intent intent = new Intent(getApplicationContext(),DetailLaporan.class);
+                        Intent intent = new Intent(getApplicationContext(),DetailTabelLaporan.class);
                         try {
-                            intent.putExtra(DetailLaporan.KEY_DETAIL_LAPORAN, data.getJSONObject(position).toString());
+                            intent.putExtra(DetailTabelLaporan.KEY_DETAIL_LAPORAN, data.getJSONObject(position).toString());
                             startActivity(intent);
                         } catch (JSONException e) {
                             e.printStackTrace();

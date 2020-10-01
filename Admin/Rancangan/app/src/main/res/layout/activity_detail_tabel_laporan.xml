@@ -87,13 +87,12 @@
     </LinearLayout>
 
 
-
     <ListView
         android:id="@+id/list_tabel"
         android:layout_width="wrap_content"
-        android:layout_height="561dp" />
+        android:layout_height="425dp" />
     <TextView
-        android:id="@+id/lp_totJum"
+        android:id="@+id/adtl_totJum"
         android:text="Total Jumlah : 3"
         android:textSize="15sp"
         android:textStyle="bold"
@@ -103,7 +102,7 @@
         android:layout_height="wrap_content"/>
 
     <TextView
-        android:id="@+id/lp_totHarga"
+        android:id="@+id/adtl_totHarga"
         android:text="Total Jumlah : Rp. 30000"
         android:textSize="15sp"
         android:textStyle="bold"

@@ -44,9 +44,10 @@ public class LaporanAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         convertView = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item_laporan, null);
         try {
-            final JSONArray tglPem = getItem(position).getJSONArray("pembelian");
+//            final JSONArray tglPem = getItem(position).getJSONArray("pembelian");
+            String namaDistributor = getItem(position).getString("nama_distributor");
             TextView tgl = convertView.findViewById(R.id.lp_nama);
-            tgl.setText(" "+tglPem);
+            tgl.setText(" "+namaDistributor);
         } catch (JSONException e) {
             e.printStackTrace();
         }

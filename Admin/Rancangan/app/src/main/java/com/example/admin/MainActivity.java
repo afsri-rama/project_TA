@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.admin.Helper.Auth;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -28,5 +30,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void Distributor(View view) {
         startActivity(new Intent(getApplicationContext(), Distributor.class));
+    }
+
+    public void Logout(View view) {
+        Auth.logout(MainActivity.this);
+        startActivity(new Intent(MainActivity.this, SplashScreen.class));
     }
 }
