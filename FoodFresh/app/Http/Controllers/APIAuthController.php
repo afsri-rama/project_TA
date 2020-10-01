@@ -88,5 +88,12 @@ class APIAuthController extends Controller
             'apiToken' => $user->api_token,
         ]);
     }
+    public function logout()
+    {
+        Auth::logout();
+        return response([
+            'msg'=>['berhasil logout']
+        ]);
+    }
 }
 

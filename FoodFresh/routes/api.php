@@ -43,6 +43,7 @@ header('Access-Control-Allow-Header: Content-Type, X-Auth-Token, Origin, Authori
 //---- UNTUK FRESH FOOD ----------
 Route::post('login', 'APIAuthController@login');
 Route::post('registerApi', 'APIAuthController@registerApi');
+Route::post('logout', 'APIAuthController@logout');
 
 Route::group(['middleware' => ['auth:api']], function () {
     Route::group(['prefix' => 'admin'], function () {
