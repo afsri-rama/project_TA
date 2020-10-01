@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DetailCostumer">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dc_idPem"
+            android:text="ID Pembayaran : 1"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorfont"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="130dp"
+            android:textSize="15sp"
+            android:id="@+id/dc_idTgl"
+            android:layout_toRightOf="@id/dc_idPem"
+            android:text="21 September 2020"
+            android:textStyle="bold"
+            android:textColor="@color/colorfont"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dc_namaKon"
+            android:text="Muthia Afrinisa"
+            android:textSize="18sp"
+            android:layout_below="@id/dc_idPem"
+            android:textColor="@color/colorfont"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dc_noWa"
+            android:textSize="18sp"
+            android:text="081267597033"
+            android:layout_below="@id/dc_namaKon"
+            android:textColor="@color/colorfont"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dc_Alamat"
+            android:text="Padang"
+            android:textSize="18sp"
+            android:layout_below="@id/dc_noWa"
+            android:textColor="@color/colorfont"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:id="@+id/garis"
+            android:background="@color/windowBackground"
+            android:layout_below="@id/dc_Alamat"
+            android:layout_marginTop="20dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/linear"
+            android:layout_below="@id/garis">
+
+            <ListView
+                android:id="@+id/listDetailPesan"
+                android:layout_width="match_parent"
+                android:layout_height="399dp"
+                android:layout_below="@id/garis"
+                android:layout_marginTop="10dp"
+                android:divider="@null"
+                android:dividerHeight="0dp" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dc_totPem"
+            android:textSize="20sp"
+            android:text="Total Pembayaran : Rp. 70000"
+            android:layout_below="@id/linear"
+            android:textColor="@color/colorRed"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

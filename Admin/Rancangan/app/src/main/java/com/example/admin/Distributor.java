@@ -7,6 +7,8 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -86,9 +88,11 @@ public class Distributor extends AppCompatActivity {
         });
     }
 
-    public void btnChatDis(View view) {
-
-    }
+//    public void btnChatDis(View view) {
+//        startActivity(new Intent(Intent.ACTION_VIEW,
+//                Uri.parse("http://almondmendoza.com/android-applications/")));
+//
+//    }
 
 //    void openWhatsappContact(String number) {
 //        Uri uri = Uri.parse("smsto:" + number);

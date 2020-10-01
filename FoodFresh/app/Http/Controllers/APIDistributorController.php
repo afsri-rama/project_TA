@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Distributor;
 use App\Keranjang;
 use App\Pembelian;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class APIDistributorController extends Controller
@@ -20,13 +21,18 @@ class APIDistributorController extends Controller
                 $keranjang= $valuePembeli->keranjang ;
                 $produk = $keranjang->produk ;
                 if($produk->id_distributor == $value->id) {
+
                     $dataPembelian[] = [
+
                         'nama_konsumen' => $valuePembeli->konsumen->nama_konsumen,
                         'alamat_konsumen' => $valuePembeli->konsumen->alamat_konsumen,
                         'total_produk' => $keranjang->total_produk,
                         'total_harga' => $keranjang->total_harga,
+                        'tgl'=> date( "l, d F Y", strtotime($valuePembeli->created_at)),
                     ];
+
                 }
+
             }
             $data[$key]['pembelian'] = $dataPembelian ;
             $data[$key]['total_produk'] = count($dataPembelian) ;

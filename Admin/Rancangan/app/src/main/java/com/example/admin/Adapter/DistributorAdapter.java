@@ -1,5 +1,6 @@
 package com.example.admin.Adapter;
 
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.view.LayoutInflater;
@@ -43,19 +44,28 @@ public class DistributorAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(int position, View convertView, final ViewGroup parent) {
         convertView = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item_distributor, null);
 
         try {
             String nmDis = getItem(position).getString("nama_distributor");
             String desDis = getItem(position).getString("des_distributor");
-            String imWa = getItem(position).getString("wa_distributor");
+            final String imWa = getItem(position).getString("wa_distributor");
 
             TextView ldNama = convertView.findViewById(R.id.ld_nama);
             TextView ldDes = convertView.findViewById(R.id.ld_des);
+            ImageView uiImWa = convertView.findViewById(R.id.chatDis);
 
             ldNama.setText(" "+nmDis);
             ldDes.setText(" "+desDis);
+
+            uiImWa.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    parent.getContext().startActivity(new Intent(Intent.ACTION_VIEW,
+                            Uri.parse("https://wa.me/"+imWa)));
+                }
+            });
 
             
         } catch (JSONException e) {

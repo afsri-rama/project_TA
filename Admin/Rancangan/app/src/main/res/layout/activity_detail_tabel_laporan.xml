@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clipToPadding="true"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="5dp"
+    app:cardUseCompatPadding="true"
+    android:background="@drawable/bg22"
+    tools:context=".DetailTabelLaporan">
+
+<!--    Detaillistdetailnya laporan-->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/windowBackground"/>
+
+    <TextView
+        android:id="@+id/NamaDis"
+        android:text="Andi : Ikan Tongkol"
+        android:textStyle="bold"
+        android:textColor="@color/colorfont"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="18sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/kolNo"
+            android:layout_width="65dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorTable1"
+            android:gravity="center"
+            android:text="No"
+            android:textColor="@color/colorfont"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/kolNama"
+            android:layout_width="141dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorTable3"
+            android:gravity="center"
+            android:text="Nama Konsumen"
+            android:textColor="@color/colorfont"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/kolJum"
+            android:layout_width="74dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorTable1"
+            android:gravity="center"
+            android:text="Jumlah"
+            android:textColor="@color/colorfont"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/kolHarga"
+            android:layout_width="115dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorTable3"
+            android:gravity="center"
+            android:text="Harga"
+            android:textColor="@color/colorfont"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+
+    <ListView
+        android:id="@+id/list_tabel"
+        android:layout_width="wrap_content"
+        android:layout_height="561dp" />
+    <TextView
+        android:id="@+id/lp_totJum"
+        android:text="Total Jumlah : 3"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorfont"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/lp_totHarga"
+        android:text="Total Jumlah : Rp. 30000"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorfont"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+</LinearLayout>

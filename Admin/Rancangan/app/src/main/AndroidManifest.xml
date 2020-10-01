@@ -13,7 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".DetailLaporan"></activity>
+        <activity android:name=".DetailTabelLaporan"></activity>
+        <activity android:name=".DetailLaporan" />
         <activity android:name=".DetailKurir" />
         <activity android:name=".DetailDistributor" />
         <activity android:name=".DetailCostumer" />

@@ -24,7 +24,6 @@ import org.json.JSONObject;
 import java.util.Map;
 
 public class Costumer extends AppCompatActivity {
-    TextView noPesanan;
     ListView listKo;
 
     @Override
@@ -32,7 +31,6 @@ public class Costumer extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_costumer);
 
-        noPesanan = (TextView)findViewById(R.id.noPesanan);
         listKo=(ListView)findViewById(R.id.list_konsumen);
 
 
@@ -44,7 +42,7 @@ public class Costumer extends AppCompatActivity {
 
             @Override
             public String getURL() {
-                return Config.API_URL+"/admin/pembelian";
+                return Config.API_URL+"/konsumen/pembayaran";
             }
 
             @Override
@@ -80,7 +78,7 @@ public class Costumer extends AppCompatActivity {
                     }
                 });
 
-//                Toast.makeText(getApplicationContext(), data.toString(), Toast.LENGTH_LONG).show();
+//                Toast.makeText(getApplicationContext(), response.toString(), Toast.LENGTH_LONG).show();
 
             }
 

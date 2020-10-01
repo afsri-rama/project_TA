@@ -10,153 +10,40 @@
     android:layout_marginRight="10dp"
     tools:context=".DetailLaporan">
 
-    <TextView
-        android:id="@+id/NamaDis"
-        android:text="Andi : Ikan Tongkol"
-        android:textStyle="bold"
-        android:textColor="@color/colorfont"
-        android:layout_marginTop="10dp"
-        android:textSize="18sp"
+    <ListView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:gravity="center"
-        android:id="@+id/table"
-        android:shrinkColumns="*"
-        android:stretchColumns="*">
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center">
-            <TextView
-                android:id="@+id/kolNo"
-                android:text="No"
-                android:textStyle="bold"
-                android:textColor="@color/colorfont"
-                android:layout_marginTop="10dp"
-                android:textSize="15sp"
-                android:gravity="center"
-                android:background="@color/colorTable1"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"/>
-
-            <TextView
-                android:id="@+id/kolNama"
-                android:text="Nama Konsumen"
-                android:textSize="15sp"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:background="@color/colorTable3"
-                android:textColor="@color/colorfont"
-                android:layout_marginTop="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"/>
-
-            <TextView
-                android:id="@+id/kolJum"
-                android:text="Jumlah"
-                android:textSize="15sp"
-                android:textStyle="bold"
-                android:background="@color/colorTable1"
-                android:textColor="@color/colorfont"
-                android:layout_marginTop="10dp"
-                android:gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"/>
-
-            <TextView
-                android:id="@+id/kolHarga"
-                android:text="Harga"
-                android:textSize="15sp"
-                android:gravity="center"
-                android:background="@color/colorTable3"
-                android:textStyle="bold"
-                android:textColor="@color/colorfont"
-                android:layout_marginTop="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"/>
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center">
-            <TextView
-                android:id="@+id/lp_kolNo"
-                android:text="1"
-                android:textStyle="bold"
-                android:textColor="@color/colorfont"
-                android:textSize="15sp"
-                android:gravity="center"
-                android:layout_marginTop="1dp"
-                android:background="@color/colorTable1"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"/>
-
-            <TextView
-                android:id="@+id/lp_kolNama"
-                android:text=" Muthia"
-                android:textSize="15sp"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:layout_marginTop="1dp"
-                android:background="@color/colorTable3"
-                android:textColor="@color/colorfont"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"/>
-
-            <TextView
-                android:id="@+id/lp_kolJum"
-                android:text="3"
-                android:textSize="15sp"
-                android:textStyle="bold"
-                android:background="@color/colorTable1"
-                android:textColor="@color/colorfont"
-                android:gravity="center"
-                android:layout_marginTop="1dp"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"/>
-
-            <TextView
-                android:id="@+id/lp_kolHarga"
-                android:text="Rp. 30000"
-                android:textSize="15sp"
-                android:gravity="center"
-                android:background="@color/colorTable3"
-                android:textStyle="bold"
-                android:textColor="@color/colorfont"
-                android:layout_marginTop="1dp"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"/>
-        </TableRow>
+        android:layout_height="match_parent"
+        android:id="@+id/list_tabel_detail"/>
 
 
-    </TableLayout>
 
-    <TextView
-    android:id="@+id/lp_totJum"
-    android:text="Total Jumlah : 3"
-    android:textSize="15sp"
-    android:textStyle="bold"
-    android:textColor="@color/colorfont"
-    android:layout_marginTop="5dp"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"/>
+<!--    <TableLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:layout_marginBottom="10dp"-->
+<!--        android:gravity="center"-->
+<!--        android:id="@+id/table"-->
+<!--        android:shrinkColumns="*"-->
+<!--        android:stretchColumns="*">-->
 
-    <TextView
-        android:id="@+id/lp_totHarga"
-        android:text="Total Jumlah : Rp. 30000"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        android:textColor="@color/colorfont"
-        android:layout_marginTop="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+<!--        <TableRow-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:gravity="center">-->
+
+<!--        </TableRow>-->
+
+<!--        <TableRow-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:gravity="center">-->
+
+<!--        </TableRow>-->
+
+
+<!--    </TableLayout>-->
+
+
 
 </LinearLayout>

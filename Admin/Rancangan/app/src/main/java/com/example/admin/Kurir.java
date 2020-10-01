@@ -84,7 +84,5 @@ public class Kurir extends AppCompatActivity {
         });
     }
 
-    public void btnChatKurir(View view) {
-        Toast.makeText(getApplicationContext(),"Bisa diklik", Toast.LENGTH_LONG).show();
-    }
+
 }

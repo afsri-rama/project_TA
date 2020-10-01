@@ -1,9 +1,13 @@
 package com.example.admin.Adapter;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.admin.R;
@@ -42,7 +46,7 @@ public class CostumerAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(int position, View convertView, final ViewGroup parent) {
         convertView = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_konsumen, null);
 
         try {
@@ -50,15 +54,26 @@ public class CostumerAdapter extends BaseAdapter {
             String idPem = jsonArray.getJSONObject(position).getString("id_pembayaran");
             String namaKon = getItem(position).getString("nama_konsumen");
             String alamaKon = getItem(position).getString("alamat_konsumen");
-
+            final String WaKon = getItem(position).getString("wa_konsumen");
 
             TextView lkPem = convertView.findViewById(R.id.lk_idPem);
             TextView lkNama= convertView.findViewById(R.id.lk_nmKon);
             TextView lkAlamat= convertView.findViewById(R.id.lk_Alamat);
+            ImageView lkWa = convertView.findViewById(R.id.chatKonsumen);
+
 
             lkPem.setText("ID Pembayaran: "+idPem);
             lkNama.setText(" "+namaKon);
             lkAlamat.setText(" "+alamaKon);
+
+            lkWa.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    parent.getContext().startActivity(new Intent(Intent.ACTION_VIEW,
+                            Uri.parse("https://wa.me/"+WaKon)));
+                }
+            });
+
         } catch (JSONException e) {
             e.printStackTrace();
         }

@@ -40,8 +40,12 @@ class APIPembayaranController extends Controller
         $data = [] ;
         foreach ($pembayaran as $key => $value) {
             $data[$key] = [
+                'id_pembayaran'=>$value->id,
                 'nama_konsumen' => $value->konsumen->nama_konsumen ,
+                'alamat_konsumen' => $value->konsumen->alamat_konsumen ,
+                'wa_konsumen' => $value->konsumen->wa_konsumen ,
                 'total_pembayaran' => $value->total_pembayaran ,
+                'tgl' => date("d F Y", strtotime($value->tgl_pembayaran)) ,
             ];
             foreach ($value->pembelian as $keyPembelian => $valuePembelian) {
                 $keranjang = $valuePembelian->keranjang ;
@@ -56,9 +60,7 @@ class APIPembayaranController extends Controller
         }
         return response([
             'msg' => '...',
-            'data' => [
-                'pembayaran' => $data,
-            ],
+            'data' => $data,
         ]);
     }
 }

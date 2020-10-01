@@ -13,22 +13,21 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class DetailPesananAdapter extends BaseAdapter {
-    public JSONArray jsonArray;
+    public JSONArray pembelian;
 
 
-    public DetailPesananAdapter(JSONArray data) {
-        this.jsonArray = jsonArray;
+    public DetailPesananAdapter(JSONArray pembelian) {
+        this.pembelian = pembelian;
     }
 
-    @Override
     public int getCount() {
-        return jsonArray.length();
+        return pembelian.length();
     }
 
     @Override
     public JSONObject getItem(int position) {
         try {
-            return jsonArray.getJSONObject(position);
+            return pembelian.getJSONObject(position);
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -44,20 +43,23 @@ public class DetailPesananAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         convertView = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item_detail_pesan, null);
         try {
-            String nmPro = getItem(position).getString("nama_produk");
+            String namaPro = getItem(position).getString("nama_produk");
             String totPro = getItem(position).getString("total_produk");
-            String hgPro = getItem(position).getString("harga_produk");
+            String harga = getItem(position).getString("harga_produk");
 
             TextView dcNm = convertView.findViewById(R.id.dc_namaPro);
             TextView dcTot = convertView.findViewById(R.id.dc_totPro);
             TextView dcHg = convertView.findViewById(R.id.dc_totHar);
 
-            dcNm.setText(" "+nmPro);
+            dcNm.setText(" "+namaPro);
             dcTot.setText(" "+totPro);
-            dcHg.setText(" "+hgPro);
+            dcHg.setText(" "+harga);
+
+
         } catch (JSONException e) {
             e.printStackTrace();
         }
+//
         return convertView;
     }
 }

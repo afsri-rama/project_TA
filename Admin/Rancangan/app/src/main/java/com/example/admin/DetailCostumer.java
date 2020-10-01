@@ -3,6 +3,10 @@ package com.example.admin;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -38,11 +42,14 @@ public class DetailCostumer extends AppCompatActivity {
             data = new JSONObject(getIntent().getSerializableExtra(KEY_DETAIL_COSTUMER).toString());
 
             String idPem = data.getString("id_pembayaran");
-            String tgl = data.getString("tanggal_pesan");
+            String tgl = data.getString("tgl");
             String nmKon = data.getString("nama_konsumen");
-            String noWa = data.getString("no_hp");
+            String noWa = data.getString("wa_konsumen");
             String alamat = data.getString("alamat_konsumen");
             String totPem = data.getString("total_pembayaran");
+            final JSONArray pembelian = data.getJSONArray("pembelian") ;
+
+
 
             //LIST PRODUK
             //JSONArray list = new JSONObject(data.toString()).getJSONArray("data");
@@ -56,6 +63,7 @@ public class DetailCostumer extends AppCompatActivity {
             TextView dcNo = findViewById(R.id.dc_noWa);
             TextView dcAlamat = findViewById(R.id.dc_Alamat);
             TextView dcTotPem = findViewById(R.id.dc_totPem);
+            ListView listDetail= findViewById(R.id.listDetailPesan);
 
             //LIST PRODUK
             // ListView listPesan = findViewById(R.id.listDetailPesan);
@@ -69,6 +77,8 @@ public class DetailCostumer extends AppCompatActivity {
             dcNo.setText(" "+noWa);
             dcAlamat.setText(" "+alamat);
             dcTotPem.setText(" "+totPem);
+
+            listDetail.setAdapter(new DetailPesananAdapter(pembelian));
 
             //LIST PRODUK
             // listPesan.setAdapter(new DetailPesananAdapter(list));
