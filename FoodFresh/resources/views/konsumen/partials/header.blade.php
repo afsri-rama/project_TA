@@ -17,7 +17,7 @@
                                 <a href="#"><i class="fa fa-twitter"></i></a>
                             </div>
 
-                            {{-- @if (isset(auth()->user()->id))
+                            @if (isset(auth()->user()->id))
                                 <div class="header__top__right__auth">
                                     <i class="fa fa-user"></i> {{auth()->user()->konsumen->nama_konsumen}}
                                 </div>
@@ -29,7 +29,7 @@
                                 <div class="header__top__right__auth">
                                     <a href="{{route('loginIndex')}}"><i class="fa fa-user"></i> Login</a>
                                 </div>
-                            @endif --}}
+                            @endif
                         </div>
                     </div>
                 </div>

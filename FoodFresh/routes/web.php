@@ -44,8 +44,9 @@ Route::group(['middleware' => ['auth', 'level-rule:'.Level::$LEVEL_KONSUMEN]], f
 Route::group(['middleware' => ['auth', 'level-rule:' . Level::$LEVEL_ADMIN]], function () {
     Route::group(['prefix' => 'admin'], function () {
         Route::get('/', function () {
-            return view('admin.welcome');
+            return view('admin.dashboard');
         })->name('admin.home');
+        Route::resource('dashboard', 'DashboardController');
         Route::resource('kategori', 'KategoriController');
         Route::resource('level', 'LevelController');
         Route::resource('user', 'UserController');
