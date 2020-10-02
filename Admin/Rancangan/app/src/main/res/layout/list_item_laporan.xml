@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:clipToPadding="true"
     app:cardCornerRadius="10dp"
-    app:cardElevation="5dp"
+    app:cardElevation="0dp"
     app:cardUseCompatPadding="true"
-    android:background="@drawable/bg22">
+    app:cardBackgroundColor="@color/colorTable1">
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="@color/windowBackground"/>
+<!--    <View-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:background="@color/windowBackground"/>-->
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp">
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginBottom="4dp"
+                android:layout_height="60dp"
                 android:gravity="bottom"
                 android:orientation="horizontal">
 
@@ -33,6 +33,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:textSize="16sp"
                     android:gravity="center_vertical"
                     android:textColor="@color/colorfont"
                     android:textStyle="bold"

@@ -1,6 +1,8 @@
 package com.example.admin;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -24,6 +26,9 @@ import java.util.Map;
 
 public class Kurir extends AppCompatActivity {
     ListView listKur;
+    ActionBar actionBar;
+    Toolbar toolbar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +36,10 @@ public class Kurir extends AppCompatActivity {
         setContentView(R.layout.activity_kurir);
 
         listKur=(ListView)findViewById(R.id.list_kurir);
+//        toolbar=(Toolbar)findViewById(R.id.toolbarkurir);
+//        actionBar=getSupportActionBar();
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        setSupportActionBar(toolbar);
 
         new RequestURL(getApplicationContext(), new RequestURL.MyRequest() {
             @Override
@@ -83,6 +92,17 @@ public class Kurir extends AppCompatActivity {
             }
         });
     }
+
+//    @Override
+//    public boolean onSupportNavigateUp(){
+//        onBackPressed();
+//        return true;
+//    }
+//
+//    @Override
+//    public void onBackPressed(){
+//        super.onBackPressed();
+//    }
 
 
 }

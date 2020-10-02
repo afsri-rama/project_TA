@@ -1,32 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="40dp"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:background="@drawable/bg22">-->
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:clipToPadding="true"
-    app:cardCornerRadius="10dp"
-    app:cardElevation="5dp"
-    app:cardUseCompatPadding="true"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:background="@drawable/bg22">
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/windowBackground"/>
+<!--    <View-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="1dp"-->
+<!--        android:background="@color/windowBackground"/>-->
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:orientation="horizontal">
+        android:layout_height="40dp"
+        android:layout_marginTop="0dp">
 
         <TextView
             android:id="@+id/lapNo"
             android:layout_width="65dp"
             android:layout_height="40dp"
-            android:layout_marginTop="10dp"
             android:background="@color/colorTable1"
             android:gravity="center"
             android:text="1"
@@ -38,7 +37,6 @@
             android:id="@+id/lapNama"
             android:layout_width="141dp"
             android:layout_height="40dp"
-            android:layout_marginTop="10dp"
             android:background="@color/colorTable3"
             android:gravity="center"
             android:text="Muthia"
@@ -50,7 +48,6 @@
             android:id="@+id/lapJum"
             android:layout_width="74dp"
             android:layout_height="40dp"
-            android:layout_marginTop="10dp"
             android:background="@color/colorTable1"
             android:gravity="center"
             android:text="3"
@@ -60,9 +57,8 @@
 
         <TextView
             android:id="@+id/lapHarga"
-            android:layout_width="115dp"
+            android:layout_width="92dp"
             android:layout_height="40dp"
-            android:layout_marginTop="10dp"
             android:background="@color/colorTable3"
             android:gravity="center"
             android:text="Rp. 1000"
@@ -72,3 +68,5 @@
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>
+
+<!--</RelativeLayout>-->

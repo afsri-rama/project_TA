@@ -30,6 +30,7 @@ public class DetailKurir extends AppCompatActivity {
             String tgl = data.getString("tgl_pengantaran");
 
             TextView lrNk= findViewById(R.id.lr_Nk);
+            TextView lrNmK= findViewById(R.id.tl_namaKurir);
             TextView lrHk = findViewById(R.id.lr_nohp);
             TextView lrnmKonsumen = findViewById(R.id.lr_Nmkon);
             TextView lrAlkon = findViewById(R.id.lr_AlKon);
@@ -37,6 +38,7 @@ public class DetailKurir extends AppCompatActivity {
             TextView lrTgl = findViewById(R.id.lr_tgl);
 
             lrNk.setText(" "+Nk);
+            lrNmK.setText(" "+Nk);
             lrHk.setText(" "+hpK);
             lrnmKonsumen.setText(" "+nmKonsumen);
             lrAlkon.setText(" "+alKon);

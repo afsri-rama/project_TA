@@ -8,7 +8,24 @@
     app:cardCornerRadius="10dp"
     app:cardElevation="5dp"
     app:cardUseCompatPadding="true"
-    android:background="@drawable/bg22">
+    android:background="@drawable/bg22"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/toolbardetaillap"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:background="@color/colorfont">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Daftar Laporan"
+            android:id="@+id/namaDistri"
+            android:textSize="20sp"
+            android:textColor="@color/toolbar"/>
+    </androidx.appcompat.widget.Toolbar>
 
     <View
         android:layout_width="match_parent"
@@ -71,9 +88,10 @@
 
             <TextView
                 android:id="@+id/kolHarga"
-                android:layout_width="115dp"
-                android:layout_height="40dp"
+                android:layout_width="94dp"
+                android:layout_height="34dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"
                 android:background="@color/colorTable3"
                 android:gravity="center"
                 android:text="Harga"
@@ -83,16 +101,19 @@
         </LinearLayout>
 
 
-
     <ListView
         android:id="@+id/lp_list_tabel"
         android:layout_width="wrap_content"
-        android:layout_height="561dp" />
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
     <TextView
         android:id="@+id/lp_totJum"
         android:text="Total Jumlah : 3"
         android:textSize="15sp"
         android:textStyle="bold"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:textColor="@color/colorfont"
         android:layout_marginTop="5dp"
         android:layout_width="match_parent"
@@ -105,6 +126,8 @@
         android:textStyle="bold"
         android:textColor="@color/colorfont"
         android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 

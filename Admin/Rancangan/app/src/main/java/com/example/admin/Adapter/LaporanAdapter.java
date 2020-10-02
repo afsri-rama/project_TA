@@ -46,8 +46,10 @@ public class LaporanAdapter extends BaseAdapter {
         try {
 //            final JSONArray tglPem = getItem(position).getJSONArray("pembelian");
             String namaDistributor = getItem(position).getString("nama_distributor");
+            String desDitributor = getItem(position).getString("des_distributor");
+
             TextView tgl = convertView.findViewById(R.id.lp_nama);
-            tgl.setText(" "+namaDistributor);
+            tgl.setText(" "+namaDistributor+" ( "+desDitributor+" )");
         } catch (JSONException e) {
             e.printStackTrace();
         }

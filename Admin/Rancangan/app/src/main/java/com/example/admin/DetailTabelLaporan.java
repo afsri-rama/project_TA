@@ -20,8 +20,8 @@ public class DetailTabelLaporan extends AppCompatActivity {
     public static String KEY_DETAIL_LAPORAN ="DetailTabelLaporan";
     JSONObject data;
 
-    TextView namaDis, lpTotJum, lpTotHarga ;
-    ListView listTable ;
+//    TextView namaDis, lpTotJum, lpTotHarga ;
+//    ListView listTable ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,20 +31,23 @@ public class DetailTabelLaporan extends AppCompatActivity {
         try {
             data = new JSONObject(getIntent().getSerializableExtra(KEY_DETAIL_LAPORAN).toString());
 
-            String namaDistributor = data.getString("des_distributor") ;
-            String totalProduk = "Total Jumlah Produk : "+data.getString("total_produk");
-            String totalHarga = "Total Harga Produk : "+data.getString("total_harga");
+            String desDis = data.getString("des_distributor") ;
+            String  namaDistributor = data.getString("nama_distributor");
+            String totalProduk = "Total Jumlah Produk :  "+data.getString("total_produk");
+             String totalHarga = "Total Harga Produk   : Rp. "+data.getString("total_harga");
             final JSONArray pembelian = data.getJSONArray("pembelian");
 
 
-            namaDis = findViewById(R.id.NamaDis);
-            listTable = findViewById(R.id.list_tabel);
-            lpTotJum = findViewById(R.id.adtl_totJum);
-            lpTotHarga = findViewById(R.id.adtl_totHarga);
+           TextView namadistri = findViewById(R.id.namaDistri);
+           TextView namaDis = findViewById(R.id.lp_NamaDis);
+           ListView listTable = findViewById(R.id.lp_list_tabel);
+           TextView lpTotJum = findViewById(R.id.lp_totJum);
+           TextView lpTotHarga = findViewById(R.id.lp_totHarga);
 
-            namaDis.setText(namaDistributor);
-            lpTotJum.setText(totalProduk);
-            lpTotHarga.setText(totalHarga);
+            namaDis.setText(" "+namaDistributor+" : "+desDis);
+            namadistri.setText(namaDistributor);
+            lpTotJum.setText(" " +totalProduk);
+            lpTotHarga.setText(" " +totalHarga);
 
             listTable.setAdapter(new BaseAdapter() {
                 @Override

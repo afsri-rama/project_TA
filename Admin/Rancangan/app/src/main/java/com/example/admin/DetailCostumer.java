@@ -58,6 +58,7 @@ public class DetailCostumer extends AppCompatActivity {
 //            String hgPro = data.getString("harga_produk");
 
             TextView dcPem = findViewById(R.id.dc_idPem);
+            TextView namKon = findViewById(R.id.dctl_namaKonsumen);
             TextView dcTgl = findViewById(R.id.dc_idTgl);
             TextView dcnm = findViewById(R.id.dc_namaKon);
             TextView dcNo = findViewById(R.id.dc_noWa);
@@ -71,12 +72,13 @@ public class DetailCostumer extends AppCompatActivity {
 //            TextView dcTot = findViewById(R.id.dc_totPro);
 //            TextView dcHg = findViewById(R.id.dc_totHar);
 
+            namKon.setText(" "+nmKon);
             dcPem.setText("ID Pembayaran : "+idPem);
             dcTgl.setText(" "+tgl);
-            dcnm.setText(" "+nmKon);
-            dcNo.setText(" "+noWa);
-            dcAlamat.setText(" "+alamat);
-            dcTotPem.setText(" "+totPem);
+                dcnm.setText("Nama   :  "+nmKon);
+                dcNo.setText("No WA  :  "+noWa);
+            dcAlamat.setText("Alamat :  "+alamat);
+            dcTotPem.setText("Total Pembayaran :  "+totPem);
 
             listDetail.setAdapter(new DetailPesananAdapter(pembelian));
 

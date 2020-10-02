@@ -19,15 +19,16 @@ public class SplashScreen extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_splash_screen);
 
-//        final Handler handler = new Handler();
-////        handler.postDelayed(new Runnable() {
-////            @Override
-////            public void run() {
-////                startActivity( new Intent(getApplicationContext(), Login.class));
-////                finish();
-////            }
-////        }, 2000L);
+        final Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+//                startActivity( new Intent(getApplicationContext(), Login.class));
+                Auth.loginRedirect(SplashScreen.this);
+                finish();
+            }
+        }, 2000L);
 
-        Auth.loginRedirect(SplashScreen.this);
+//        Auth.loginRedirect(SplashScreen.this);
     }
 }

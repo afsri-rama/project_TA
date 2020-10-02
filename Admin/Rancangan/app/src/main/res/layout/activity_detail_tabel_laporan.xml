@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,39 +8,49 @@
     app:cardCornerRadius="10dp"
     app:cardElevation="5dp"
     app:cardUseCompatPadding="true"
-    android:background="@drawable/bg22"
-    tools:context=".DetailTabelLaporan">
+    android:background="@drawable/halaman">
 
-<!--    Detaillistdetailnya laporan-->
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/toolbardetaillap"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:background="@color/colorfont">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Daftar Laporan"
+            android:id="@+id/namaDistri"
+            android:textSize="20sp"
+            android:textColor="@color/toolbar"/>
+    </androidx.appcompat.widget.Toolbar>
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="2dp"
+        android:layout_height="1dp"
         android:background="@color/windowBackground"/>
 
     <TextView
-        android:id="@+id/NamaDis"
+        android:id="@+id/lp_NamaDis"
         android:text="Andi : Ikan Tongkol"
         android:textStyle="bold"
         android:textColor="@color/colorfont"
         android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="20dp"
         android:textSize="18sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
         android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"
-        android:orientation="horizontal">
+        android:layout_marginLeft="20dp">
 
         <TextView
             android:id="@+id/kolNo"
             android:layout_width="65dp"
             android:layout_height="40dp"
-            android:layout_marginTop="10dp"
             android:background="@color/colorTable1"
             android:gravity="center"
             android:text="No"
@@ -53,7 +62,6 @@
             android:id="@+id/kolNama"
             android:layout_width="141dp"
             android:layout_height="40dp"
-            android:layout_marginTop="10dp"
             android:background="@color/colorTable3"
             android:gravity="center"
             android:text="Nama Konsumen"
@@ -65,7 +73,6 @@
             android:id="@+id/kolJum"
             android:layout_width="74dp"
             android:layout_height="40dp"
-            android:layout_marginTop="10dp"
             android:background="@color/colorTable1"
             android:gravity="center"
             android:text="Jumlah"
@@ -75,39 +82,50 @@
 
         <TextView
             android:id="@+id/kolHarga"
-            android:layout_width="115dp"
+            android:layout_width="92dp"
             android:layout_height="40dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
             android:background="@color/colorTable3"
             android:gravity="center"
             android:text="Harga"
             android:textColor="@color/colorfont"
             android:textSize="15sp"
             android:textStyle="bold" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/windowBackground"/>
     </LinearLayout>
 
 
     <ListView
-        android:id="@+id/list_tabel"
-        android:layout_width="wrap_content"
-        android:layout_height="425dp" />
+        android:id="@+id/lp_list_tabel"
+        android:layout_width="373dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp" />
+
     <TextView
-        android:id="@+id/adtl_totJum"
+        android:id="@+id/lp_totJum"
         android:text="Total Jumlah : 3"
         android:textSize="15sp"
         android:textStyle="bold"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
         android:textColor="@color/colorfont"
         android:layout_marginTop="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
     <TextView
-        android:id="@+id/adtl_totHarga"
-        android:text="Total Jumlah : Rp. 30000"
+        android:id="@+id/lp_totHarga"
+        android:text="Total Harga : Rp. 30000"
         android:textSize="15sp"
         android:textStyle="bold"
         android:textColor="@color/colorfont"
         android:layout_marginTop="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 

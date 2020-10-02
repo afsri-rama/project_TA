@@ -22,6 +22,7 @@ public class DetailLaporan extends AppCompatActivity {
 
         try {
             data = new JSONArray(getIntent().getSerializableExtra(KEY_DETAIL_LAPORAN).toString());
+//            String namaDistributor = data.getString("des_distributor") ;
 //            final JSONArray pembelian = data.getJSONArray("pembelian");
 
             ListView listDetail = findViewById(R.id.list_laporan);

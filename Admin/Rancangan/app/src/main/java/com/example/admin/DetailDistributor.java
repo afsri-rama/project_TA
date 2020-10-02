@@ -29,14 +29,16 @@ public class DetailDistributor extends AppCompatActivity {
             String desDis = data.getString("des_distributor");
 
             TextView ddId = findViewById(R.id.dd_Id);
+            TextView tlDis = findViewById(R.id.tl_namaDistributor);
             TextView ddNm = findViewById(R.id.dd_nama);
             TextView ddNo = findViewById(R.id.dd_noWa);
             TextView ddDes = findViewById(R.id.dd_Des);
 
-            ddId.setText("ID      : "+idDis);
-            ddNm.setText("Nama    : "+nmDis);
-            ddNo.setText("No Hp   : "+noDis);
-            ddDes.setText("Produk : "+desDis);
+             ddId.setText("ID Distributor :  "+idDis);
+             ddNm.setText("Nama           :  "+nmDis);
+             ddNo.setText("No Hp          :  "+noDis);
+            ddDes.setText("Produk         :  "+desDis);
+            tlDis.setText(" "+nmDis);
 
         } catch (JSONException e) {
             e.printStackTrace();

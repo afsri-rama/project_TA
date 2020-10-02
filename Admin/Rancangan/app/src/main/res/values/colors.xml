@@ -2,6 +2,7 @@
 <resources>
 
     <color name="colorfont">#284707</color>
+    <color name="colorIcon">#9fa79c</color>
 
     <color name="colorPrimary">#284707</color>
     <color name="colorPrimaryDark">#345C09</color>
@@ -27,7 +28,7 @@
     <color name="windowBackground">#DDDDDD</color>
     <color name="lightBackground">#E0E0E0</color>
     <color name="darkBackground">#424242</color>
-    <color name="drawerBackground">#FFfafafa</color>
+    <color name="toolbar">#FFfafafa</color>
     <color name="rowBackground">#F2F2F2</color>
 
     <color name="colorRed">#830404</color>

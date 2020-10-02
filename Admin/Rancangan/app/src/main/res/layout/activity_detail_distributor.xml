@@ -5,7 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/halaman"
     tools:context=".DetailDistributor">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/toolbardetaildistributor"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:background="@color/colorfont">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Daftar Distributor"
+            android:id="@+id/tl_namaDistributor"
+            android:textSize="20sp"
+            android:textColor="@color/toolbar"/>
+    </androidx.appcompat.widget.Toolbar>
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -15,28 +31,39 @@
         android:layout_marginRight="10dp">
 
         <ImageView
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_centerHorizontal="true"
             android:id="@+id/profil"
-            android:src="@drawable/ic_action_name"/>
+            android:layout_width="228dp"
+            android:layout_height="227dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/account" />
 
         <View
             android:layout_width="match_parent"
             android:layout_below="@id/profil"
-            android:layout_height="2dp"
+            android:layout_height="1dp"
             android:id="@+id/garis"
-            android:background="@color/windowBackground"
+            android:background="@color/colorfont"
             android:layout_marginTop="40dp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/dd_Id"
+            android:id="@+id/detailDis"
             android:layout_below="@id/garis"
-            android:text="ID Distributor : 1"
+            android:text="Data Distributor Sebagai Berikut:"
             android:textSize="20sp"
             android:textStyle="bold"
+            android:textColor="@color/colorfont"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dd_Id"
+            android:layout_below="@id/detailDis"
+            android:text="ID Distributor : 1"
+            android:textSize="20sp"
             android:textColor="@color/colorfont"
             android:layout_marginTop="30dp"
             android:layout_marginLeft="10dp"/>

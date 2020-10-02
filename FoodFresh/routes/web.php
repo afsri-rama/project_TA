@@ -24,11 +24,12 @@ Route::get('/', function () {
     return view('konsumen.home');
 })->name('home');
 
-Route::resource('produk_konsumen', 'ProdukKonumenController');
-Route::resource('kategori_konsumen', 'KategoriKonsumenController');
-Route::get('/detail/{idProduk}', 'DetailProdukController@getDetail')->name('detail.getDetail');
+Route::group(['middleware' => ['auth', 'level-rule:' . Level::$LEVEL_KONSUMEN]], function () {
+    Route::resource('produk_konsumen', 'ProdukKonumenController');
+    Route::resource('kategori_konsumen', 'KategoriKonsumenController');
+    Route::get('/detail/{idProduk}', 'DetailProdukController@getDetail')->name('detail.getDetail');
 
-Route::group(['middleware' => ['auth', 'level-rule:'.Level::$LEVEL_KONSUMEN]], function () {
+// Route::group(['middleware' => ['auth', 'level-rule:'.Level::$LEVEL_KONSUMEN]], function () {
     Route::put('/checkout/pesan', 'CheckoutController@pesan')->name('checkout.pesan');
     Route::resource('checkout', 'CheckoutController');
     Route::resource('keranjang', 'KeranjangController');
