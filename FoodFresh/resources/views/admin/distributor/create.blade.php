@@ -16,7 +16,7 @@
                 </div>
                 <div class="form-group">
                     <label for="labelinput">WA Distributor</label>
-                    <input type="text" placeholder="WA DISTRIBUTOR" name='wa_distributor' class="form-control {{ $errors->has('wa_distributor') ? 'is-invalid' : '' }}">
+                    <input type="text" placeholder="WA DISTRIBUTOR" value = '+62'name='wa_distributor' class="form-control {{ $errors->has('wa_distributor') ? 'is-invalid' : '' }}">
                     <span class="text-danger">{{ $errors->first('wa_distributor') }}</span>
                 </div>
                 <div class="form-group">

@@ -58,7 +58,7 @@
         </div>
 
         <div class="input-group mb-3">
-          <input type="text"  placeholder="WA" name='wa_konsumen' value='{{old('wa_konsumen')}}' class="form-control {{ $errors->has('wa_konsumen') ? 'is-invalid' : '' }}">
+          <input type="text"  placeholder="WA" name='wa_konsumen' value='+62{{old('wa_konsumen')}}' class="form-control {{ $errors->has('wa_konsumen') ? 'is-invalid' : '' }}">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="text-danger">{{ $errors->first('wa_konsumen') }}</span>

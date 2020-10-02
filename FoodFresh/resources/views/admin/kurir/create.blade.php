@@ -16,7 +16,7 @@
                 </div>
                 <div class="form-group">
                     <label for="labelinput">WA Kurir</label>
-                    <input type="text" placeholder="WA KURIR" name='wa_kurir' class="form-control {{ $errors->has('wa_kurir') ? 'is-invalid' : '' }}">
+                    <input type="text" placeholder="WA KURIR"  value='+62' name='wa_kurir' class="form-control {{ $errors->has('wa_kurir') ? 'is-invalid' : '' }}">
                     <span class="text-danger">{{ $errors->first('wa_kurir') }}</span>
                 </div>
                 <div class="form-group">
