@@ -78,17 +78,20 @@ public class DetailTabelLaporan extends AppCompatActivity {
                     TextView uiLapNama = convertView.findViewById(R.id.lapNama) ;
                     TextView uiLapJum = convertView.findViewById(R.id.lapJum) ;
                     TextView uiLapHarga = convertView.findViewById(R.id.lapHarga) ;
+                    TextView tgl =convertView.findViewById(R.id.lapTanggal);
 
                     try {
                         String no = String.valueOf(position+1);
                         String nama = getItem(position).getString("nama_konsumen");
                         String jumlah = getItem(position).getString("total_produk");
                         String harga = getItem(position).getString("total_harga");
+                        String tgll=getItem(position).getString("tgl");
 
                         uiLapNo.setText(no);
                         uiLapNama.setText(nama);
                         uiLapJum.setText(jumlah);
                         uiLapHarga.setText(harga);
+                        tgl.setText(tgll);
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }

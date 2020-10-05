@@ -39,5 +39,6 @@ public class MainActivity extends AppCompatActivity {
     public void Logout(View view) {
         Auth.logout(MainActivity.this);
         startActivity(new Intent(MainActivity.this, SplashScreen.class));
+        finish();
     }
 }

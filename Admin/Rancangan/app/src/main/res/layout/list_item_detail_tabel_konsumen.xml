@@ -24,7 +24,7 @@
 
         <TextView
             android:id="@+id/lapNo"
-            android:layout_width="65dp"
+            android:layout_width="34dp"
             android:layout_height="40dp"
             android:background="@color/colorTable1"
             android:gravity="center"
@@ -35,7 +35,7 @@
 
         <TextView
             android:id="@+id/lapNama"
-            android:layout_width="141dp"
+            android:layout_width="124dp"
             android:layout_height="40dp"
             android:background="@color/colorTable3"
             android:gravity="center"
@@ -46,7 +46,7 @@
 
         <TextView
             android:id="@+id/lapJum"
-            android:layout_width="74dp"
+            android:layout_width="41dp"
             android:layout_height="40dp"
             android:background="@color/colorTable1"
             android:gravity="center"
@@ -57,13 +57,24 @@
 
         <TextView
             android:id="@+id/lapHarga"
-            android:layout_width="92dp"
+            android:layout_width="85dp"
             android:layout_height="40dp"
             android:background="@color/colorTable3"
             android:gravity="center"
-            android:text="Rp. 1000"
+            android:text="1000"
             android:textColor="@color/colorfont"
             android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lapTanggal"
+            android:layout_width="107dp"
+            android:layout_height="45dp"
+            android:background="@color/colorTable1"
+            android:gravity="center"
+            android:text="21 September 2020"
+            android:textColor="@color/colorfont"
+            android:textSize="9sp"
             android:textStyle="bold" />
     </LinearLayout>
 

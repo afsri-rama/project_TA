@@ -118,6 +118,7 @@ public class Login extends AppCompatActivity {
 //                simpan data akun
 
                 startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                finish();
             }
 
             @Override

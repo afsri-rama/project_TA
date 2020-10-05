@@ -49,7 +49,7 @@
 
         <TextView
             android:id="@+id/kolNo"
-            android:layout_width="65dp"
+            android:layout_width="34dp"
             android:layout_height="40dp"
             android:background="@color/colorTable1"
             android:gravity="center"
@@ -60,7 +60,7 @@
 
         <TextView
             android:id="@+id/kolNama"
-            android:layout_width="141dp"
+            android:layout_width="124dp"
             android:layout_height="40dp"
             android:background="@color/colorTable3"
             android:gravity="center"
@@ -71,26 +71,38 @@
 
         <TextView
             android:id="@+id/kolJum"
-            android:layout_width="74dp"
+            android:layout_width="41dp"
             android:layout_height="40dp"
             android:background="@color/colorTable1"
             android:gravity="center"
-            android:text="Jumlah"
+            android:text="Jum"
             android:textColor="@color/colorfont"
             android:textSize="15sp"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/kolHarga"
-            android:layout_width="92dp"
+            android:layout_width="85dp"
             android:layout_height="40dp"
-            android:layout_marginRight="20dp"
             android:background="@color/colorTable3"
             android:gravity="center"
             android:text="Harga"
             android:textColor="@color/colorfont"
             android:textSize="15sp"
             android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/kolTanggal"
+            android:layout_width="97dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/colorTable1"
+            android:gravity="center"
+            android:text="Tanggal"
+            android:textColor="@color/colorfont"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
@@ -100,10 +112,10 @@
 
     <ListView
         android:id="@+id/lp_list_tabel"
-        android:layout_width="373dp"
+        android:layout_width="381dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:layout_marginRight="10dp" />
+        android:layout_marginRight="3dp" />
 
     <TextView
         android:id="@+id/lp_totJum"

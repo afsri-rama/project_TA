@@ -46,10 +46,12 @@ public class ListTabelLaporanAdapter extends BaseAdapter {
         try {
             String namaKon = getItem(position).getString("nama_konsumen");
             String jum = getItem(position).getString("total_produk");
+            String tgll=getItem(position).getString("tgl");
             String hrg = getItem(position).getString("total_harga");
             Integer nomor = no + 1;
 
             TextView No =convertView.findViewById(R.id.lapNo);
+            TextView tgl =convertView.findViewById(R.id.lapTanggal);
             TextView nama = convertView.findViewById(R.id.lapNama);
             TextView tot = convertView.findViewById(R.id.lapJum);
             TextView harga = convertView.findViewById(R.id.lapHarga);
@@ -58,6 +60,7 @@ public class ListTabelLaporanAdapter extends BaseAdapter {
             nama.setText(" "+namaKon);
             tot.setText(" "+jum);
             harga.setText(" "+hrg);
+            tgl.setText(" "+tgll);
 
 
         } catch (JSONException e) {

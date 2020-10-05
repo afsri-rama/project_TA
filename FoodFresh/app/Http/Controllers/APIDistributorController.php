@@ -28,7 +28,7 @@ class APIDistributorController extends Controller
                         'alamat_konsumen' => $valuePembeli->konsumen->alamat_konsumen,
                         'total_produk' => $keranjang->total_produk,
                         'total_harga' => $keranjang->total_harga,
-                        'tgl'=> date( "l, d F Y", strtotime($valuePembeli->created_at)),
+                        'tgl'=> date( "d F Y", strtotime($valuePembeli->created_at)),
                     ];
 
                 }

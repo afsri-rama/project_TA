@@ -50,10 +50,12 @@ public class ListDetailLaporanAdapter extends BaseAdapter {
             String nmDis = getItem(position).getString("nama_distributor");
             String desDis = getItem(position).getString("des_distributor");
             String totJum = getItem(position).getString("total_produk");
+            String tgll=getItem(position).getString("tgl");
             String totHarga = getItem(position).getString("total_harga");
             final JSONArray pembelian = getItem(position).getJSONArray("pembelian");
 
             TextView NmDis = convertView.findViewById(R.id.lp_NamaDis);
+            TextView tgl =convertView.findViewById(R.id.lapTanggal);
             TextView totjuml = convertView.findViewById(R.id.lp_totJum);
             TextView totHrg = convertView.findViewById(R.id.lp_totHarga);
             ListView listtabel = convertView.findViewById(R.id.lp_list_tabel);
@@ -61,6 +63,7 @@ public class ListDetailLaporanAdapter extends BaseAdapter {
             NmDis.setText("  "+nmDis+":  "+desDis);
             totjuml.setText("Total Jumlah : "+totJum);
              totHrg.setText("Total Harga  : Rp.  "+totHarga);
+            tgl.setText(" "+tgll);
              listtabel.setAdapter(new ListTabelLaporanAdapter(pembelian));
 
 
