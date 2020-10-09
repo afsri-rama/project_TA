@@ -47,8 +47,16 @@
 
     <!-- Main content -->
     <section class="content">
-        @include('alert.alert')
-        @yield('content')
+
+        <div class="card card-primary card-outline">
+          <div class="card-body">
+            <h5 class="card-title"></h5>
+            <div class="container">
+              @include('alert.alert')
+              @yield('content')
+            </div>
+          </div>
+        </div>
 
     </section>
     <!-- /.content -->
