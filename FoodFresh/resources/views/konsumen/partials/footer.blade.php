@@ -1,9 +1,9 @@
 <footer class="footer spad">
         <div class="container">
             <div class="row">
-                <div class="col-lg-2 col-md-6 col-sm-6">
+                <div class="col-lg-2 col-md-6 col-sm-6 col-3">
                         <div class="footer__about__logo">
-                            <a href="./index.html"><img src="{{asset('konsumen_theme')}}/img/logo2.png" alt="" width="50%" height="50%"></a>
+                           <img src="{{asset('konsumen_theme')}}/img/logo2.png" alt="" width="50%" height="50%">
                         </div>
                 </div>
                 <div class="col-lg-10 col-md-6">

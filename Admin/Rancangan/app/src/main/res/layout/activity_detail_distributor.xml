@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/halaman"
+    android:background="@color/divider"
     tools:context=".DetailDistributor">
 
     <androidx.appcompat.widget.Toolbar
@@ -19,10 +19,12 @@
             android:layout_height="wrap_content"
             android:text="Daftar Distributor"
             android:id="@+id/tl_namaDistributor"
-            android:textSize="20sp"
+            android:textSize="20dp"
             android:textColor="@color/toolbar"/>
     </androidx.appcompat.widget.Toolbar>
-
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -32,8 +34,8 @@
 
         <ImageView
             android:id="@+id/profil"
-            android:layout_width="228dp"
-            android:layout_height="227dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:layout_centerHorizontal="true"
             android:src="@drawable/account" />
 
@@ -51,7 +53,6 @@
             android:id="@+id/detailDis"
             android:layout_below="@id/garis"
             android:text="Data Distributor Sebagai Berikut:"
-            android:textSize="20sp"
             android:textStyle="bold"
             android:textColor="@color/colorfont"
             android:layout_marginTop="30dp"
@@ -63,7 +64,6 @@
             android:id="@+id/dd_Id"
             android:layout_below="@id/detailDis"
             android:text="ID Distributor : 1"
-            android:textSize="20sp"
             android:textColor="@color/colorfont"
             android:layout_marginTop="30dp"
             android:layout_marginLeft="10dp"/>
@@ -72,7 +72,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/dd_nama"
-            android:textSize="20sp"
             android:text="Muthia Afrinisa"
             android:layout_below="@id/dd_Id"
             android:textColor="@color/colorfont"
@@ -82,7 +81,6 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
             android:id="@+id/dd_noWa"
             android:text="081267597033"
             android:layout_below="@id/dd_nama"
@@ -94,7 +92,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/dd_Des"
-            android:textSize="20sp"
             android:text="Ikan Segar"
             android:layout_below="@id/dd_noWa"
             android:textColor="@color/colorfont"
@@ -104,6 +101,6 @@
 
 
     </RelativeLayout>
-
+</ScrollView>
 
 </LinearLayout>

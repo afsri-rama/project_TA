@@ -6,15 +6,25 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Admin Fresh Food</title>
   <!-- Tell the browser to be responsive to screen width -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport">
 
   @include('admin.partials.style')
+
 </head>
 <body class="hold-transition sidebar-mini">
+
 <!-- Site wrapper -->
 <div class="wrapper">
   <!-- Navbar -->
-  {{--@include('admin.partials.navbar')--}}
+  {{-- @include('admin.partials.navbar') --}}
+  <nav class="main-header navbar navbar-expand navbar-grey navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+    </ul>
+</nav>
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
@@ -23,7 +33,7 @@
     @include('admin.partials.brand_logo')
 
     <!-- Sidebar -->
-    <div class="sidebar">
+    <div class="sidebar col-12 col-md-12 col-sm-12">
       <!-- Sidebar user (optional) -->
       @include('admin.partials.sidebar')
       <!-- /.sidebar-menu -->

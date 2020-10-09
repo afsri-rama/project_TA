@@ -50,14 +50,17 @@ public class KurirAdapter extends BaseAdapter {
             String nmKurir = getItem(position).getString("nama_kurir");
             String nmKon = getItem(position).getString("nama_konsumen");
             String st = getItem(position).getString("status");
+            String tg = getItem(position).getString("tgl_pengantaran");
             final String WaKurir = getItem(position).getString("hp_kurir");
 
             TextView lrNm = convertView.findViewById(R.id.lr_nama);
             TextView lrKon= convertView.findViewById(R.id.lr_nmKon);
             ImageView lrWa = convertView.findViewById(R.id.chatKurir);
+            TextView lrtg= convertView.findViewById(R.id.lr_tglDepan);
 
             lrNm.setText(" "+nmKurir);
             lrKon.setText(" "+nmKon+ "( "+st+" )");
+            lrtg.setText(" "+tg);
 
             lrWa.setOnClickListener(new View.OnClickListener() {
                 @Override

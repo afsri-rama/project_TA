@@ -3,7 +3,9 @@ package com.example.admin;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -40,5 +42,10 @@ public class MainActivity extends AppCompatActivity {
         Auth.logout(MainActivity.this);
         startActivity(new Intent(MainActivity.this, SplashScreen.class));
         finish();
+    }
+
+    public void webKon(View view) {
+        view.getContext().startActivity(new Intent(Intent.ACTION_VIEW,
+                Uri.parse("http://pasarrayaonline.com/login")));
     }
 }

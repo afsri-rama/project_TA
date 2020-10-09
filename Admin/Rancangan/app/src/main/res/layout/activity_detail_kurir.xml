@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@drawable/halaman"
+    android:background="@color/divider"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".DetailKurir">
@@ -19,10 +19,12 @@
             android:layout_height="wrap_content"
             android:text="Daftar Kurir"
             android:id="@+id/tl_namaKurir"
-            android:textSize="20sp"
+            android:textSize="20dp"
             android:textColor="@color/toolbar"/>
     </androidx.appcompat.widget.Toolbar>
-
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -33,8 +35,8 @@
 
         <ImageView
             android:id="@+id/profil"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:layout_centerHorizontal="true"
             android:src="@drawable/account"/>
 
@@ -45,7 +47,6 @@
             android:layout_below="@id/profil"
             android:text="Kurir 1"
             android:layout_centerHorizontal="true"
-            android:textSize="20sp"
             android:textStyle="bold"
             android:textColor="@color/colorfont"
             android:layout_marginTop="10dp"
@@ -55,7 +56,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/lr_nohp"
-            android:textSize="20sp"
             android:text="081267597033"
             android:layout_centerHorizontal="true"
             android:layout_below="@id/lr_Nk"
@@ -66,7 +66,7 @@
 <!--        <TextView-->
 <!--            android:layout_width="wrap_content"-->
 <!--            android:layout_height="wrap_content"-->
-<!--            android:textSize="20sp"-->
+<!--            android:textSize="20dp"-->
 <!--            android:id="@+id/lr_alamat"-->
 <!--            android:text="Padang"-->
 <!--            android:layout_centerHorizontal="true"-->
@@ -90,7 +90,6 @@
             android:layout_below="@id/garis"
             android:layout_marginTop="10dp"
             android:text="Mengantar Pesanan Konsumen Berikut:"
-            android:textSize="18sp"
             android:textColor="@color/colorfont"
             android:textStyle="bold"/>
 
@@ -101,7 +100,6 @@
             android:layout_below="@id/judul"
             android:layout_marginTop="10dp"
             android:text="Nama  : "
-            android:textSize="18sp"
             android:textColor="@color/colorfont"/>
 
         <TextView
@@ -112,7 +110,6 @@
             android:layout_toRightOf="@id/lk_tbNmkon"
             android:layout_marginTop="10dp"
             android:text="Muthia Afnisa "
-            android:textSize="18sp"
             android:textColor="@color/colorfont"/>
 
         <TextView
@@ -122,7 +119,6 @@
             android:layout_below="@id/lk_tbNmkon"
             android:layout_marginTop="10dp"
             android:text="HP        : "
-            android:textSize="18sp"
             android:textColor="@color/colorfont"/>
 
         <TextView
@@ -133,7 +129,6 @@
             android:layout_toRightOf="@id/lk_tbNohpKon"
             android:layout_marginTop="10dp"
             android:text="081267597033 "
-            android:textSize="18sp"
             android:textColor="@color/colorfont"/>
 
         <TextView
@@ -143,7 +138,6 @@
             android:layout_below="@id/lk_tbNohpKon"
             android:layout_marginTop="10dp"
             android:text="Alamat : "
-            android:textSize="18sp"
             android:textColor="@color/colorfont"/>
 
         <TextView
@@ -154,7 +148,6 @@
             android:layout_toRightOf="@id/lk_tbAlKon"
             android:layout_marginTop="10dp"
             android:text="Jln Kapalo koto no 22, pauh, Padang, sumatera barat "
-            android:textSize="18sp"
             android:textColor="@color/colorfont"/>
 
         <TextView
@@ -164,7 +157,6 @@
             android:layout_below="@id/lr_AlKon"
             android:layout_marginTop="10dp"
             android:text="Tanggal Antar : "
-            android:textSize="18sp"
             android:textColor="@color/colorfont"/>
 
         <TextView
@@ -175,8 +167,8 @@
             android:layout_toRightOf="@id/lk_tbTgl"
             android:layout_marginTop="10dp"
             android:text=" 22 September 2020 "
-            android:textSize="18sp"
             android:textColor="@color/colorfont"/>
     </RelativeLayout>
+</ScrollView>
 
 </LinearLayout>

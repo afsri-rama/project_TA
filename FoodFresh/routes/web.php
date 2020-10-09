@@ -39,6 +39,9 @@ Route::group(['middleware' => ['auth', 'level-rule:' . Level::$LEVEL_KONSUMEN]],
     Route::resource('pembayaran', 'PembayaranController');
     Route::resource('konfirmasi', 'KonfirmasiController');
     Route::resource('kontak', 'KontakController');
+    Route::resource('histori', 'HistoriController');
+    Route::resource('historiPesan', 'HistoriPesanController');
+
 });
 
 
@@ -62,6 +65,7 @@ Route::group(['middleware' => ['auth', 'level-rule:' . Level::$LEVEL_ADMIN]], fu
         });
         Route::resource('pemesanan', 'PemesananController');
         Route::resource('pembelian', 'PembelianController');
+        Route::resource('keranjang_admin', 'KeranjangAdminController');
 
     });
 });

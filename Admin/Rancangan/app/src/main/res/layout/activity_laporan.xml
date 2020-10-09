@@ -4,8 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/halaman"
+    android:background="@color/divider"
     tools:context=".Laporan">
+<!--    android:background="@drawable/halaman"-->
+
 
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
@@ -17,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Daftar Laporan"
-            android:textSize="20sp"
+            android:textSize="20dp"
             android:textColor="@color/toolbar"/>
     </androidx.appcompat.widget.Toolbar>
 

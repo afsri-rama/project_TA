@@ -35,7 +35,8 @@ class APIPembayaranController extends Controller
         //     ]
         // ]);
 
-        $pembayaran = Pembayaran::all();
+        $pembayaran = Pembayaran::orderByDesc('created_at')->get();
+        // $pembayaran = Pembayaran::all();
 
         $data = [] ;
         foreach ($pembayaran as $key => $value) {
@@ -52,6 +53,7 @@ class APIPembayaranController extends Controller
                 $produk = $keranjang->produk ;
                 $data[$key]['pembelian'][$keyPembelian] = [
                     'nama_produk' => $produk->nama_produk,
+                    'des_produk'=>$produk->des_produk,
                     'total_produk' => $keranjang->total_produk,
                     'harga_produk' => $produk->harga_produk,
                     'total_harga' => $keranjang->total_harga,

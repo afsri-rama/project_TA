@@ -17,10 +17,25 @@
                                 <a href="#"><i class="fa fa-twitter"></i></a>
                             </div>
 
-                            @if (isset(auth()->user()->id))
+
+                            {{-- @if (isset(auth()->user()->id))
                                 <div class="header__top__right__auth">
                                     <i class="fa fa-user"></i> {{auth()->user()->konsumen->nama_konsumen}}
                                 </div>
+                                |
+                                <div class="header__top__right__auth">
+                                    <a href="{{route('logout')}}"> Logout </a>
+                                </div>
+                            @else
+                                <div class="header__top__right__auth">
+                                    <a href="{{route('loginIndex')}}"><i class="fa fa-user"></i> Login</a>
+                                </div>
+                            @endif --}}
+
+                            @if (isset(auth()->user()->id))
+                                {{-- <div class="header__top__right__auth">
+                                    <i class="fa fa-user"></i> {{auth()->user()->konsumen->nama_konsumen}}
+                                </div> --}}
                                 |
                                 <div class="header__top__right__auth">
                                     <a href="{{route('logout')}}"> Logout </a>
@@ -37,12 +52,12 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-md-3">
                     <div class="header__logo" style="margin-left: 30%">
                         <img src="{{asset('konsumen_theme')}}/img/logotoko.png" alt="" style="width: 60%"   ></a>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 col-md-6">
                     <nav class="header__menu">
                         <ul>
                             <li><a href="{{route('home')}}">Home</a></li>
@@ -53,12 +68,21 @@
                                     <li><a href="{{route('checkout.index')}}">Check Out</a></li>
                                 </ul>
                             </li>
+                            <li><a href="#">Histori</a>
+                                <ul class="header__menu__dropdown">
+                                    <li><a href="{{route('histori.index')}}">Pembayaran</a></li>
+                                    <li><a href="{{route('historiPesan.index')}}">Pesanan</a></li>
+                                </ul>
+                            </li>
                             <li><a href="{{route('kontak.index')}}">Kontak</a></li>
                         </ul>
                     </nav>
                 </div>
                 <div class="col-lg-3">
                 </div>
+            </div>
+            <div class="humberger__open">
+                <i class="fa fa-bars"></i>
             </div>
         </div>
     </header>

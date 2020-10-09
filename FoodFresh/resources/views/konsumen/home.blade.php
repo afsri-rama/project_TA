@@ -2,7 +2,7 @@
 @section('content')
 
 
-    <div class="hero__item set-bg" data-setbg="{{asset('konsumen_theme')}}/img/hero/banner.jpg">
+    <div class="hero__item set-bg  col-md-12" data-setbg="{{asset('konsumen_theme')}}/img/hero/banner.jpg">
         <div class="hero__text">
             <span>FRESH FOOD</span>
             <h3>BAHAN MAKANAN <br />100% Segar</h3>

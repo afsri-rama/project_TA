@@ -28,21 +28,36 @@
                     <td> {{$item->password}} </td>
                     <td >
                         <div class="btn btn-group btn-group-xs">
-                            {{-- edit --}}
-                            <a href="{{route('user.edit', $item->id)}}" class="btn btn-xs btn-info"> ✏ EDIT | SHOW </a>
-                            {{-- delete --}}
-                            <a href="" class="btn btn-danger btn-xs" onclick="
-                                var cfm = confirm('Yakin Akan Menghapus ?');
-                                if(cfm){
-                                event.preventDefault();
-                                document.getElementById('{{$item->id}}').submit();
-                                }
-                            "> ❌ </i> Delete</a>
-                            </div>
-                            <form id='{{$item->id}}' action="{{route('user.destroy',$item->id)}}" style="display:none;" method="post">
-                                @csrf
-                                @method('DELETE')
-                            </form>
+                            @if ($item->level->id != 1)
+                                    <a href="" class="btn btn-danger btn-xs" onclick="
+                                    var cfm = confirm('Yakin Akan Menghapus ?');
+                                    if(cfm){
+                                    event.preventDefault();
+                                    document.getElementById('{{$item->id}}').submit();
+                                    }
+                                "> ❌ </i> Delete</a>
+                                <form id='{{$item->id}}' action="{{route('user.destroy',$item->id)}}" style="display:none;" method="post">
+                                    @csrf
+                                    @method('DELETE')
+                                </form>
+                            @else
+                                {{-- edit --}}
+                                <a href="{{route('user.edit', $item->id)}}" class="btn btn-xs btn-info"> ✏ EDIT | SHOW </a>
+                                {{-- delete --}}
+                                <a href="" class="btn btn-danger btn-xs" onclick="
+                                    var cfm = confirm('Yakin Akan Menghapus ?');
+                                    if(cfm){
+                                    event.preventDefault();
+                                    document.getElementById('{{$item->id}}').submit();
+                                    }
+                                "> ❌ </i> Delete</a>
+                                <form id='{{$item->id}}' action="{{route('user.destroy',$item->id)}}" style="display:none;" method="post">
+                                    @csrf
+                                    @method('DELETE')
+                                </form>
+
+                            @endif
+
                         </div>
                     </td>
                 </tr>

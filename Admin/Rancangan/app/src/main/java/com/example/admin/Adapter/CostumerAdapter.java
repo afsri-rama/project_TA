@@ -54,17 +54,20 @@ public class CostumerAdapter extends BaseAdapter {
             String idPem = jsonArray.getJSONObject(position).getString("id_pembayaran");
             String namaKon = getItem(position).getString("nama_konsumen");
             String alamaKon = getItem(position).getString("alamat_konsumen");
+            String tglP = getItem(position).getString("tgl");
             final String WaKon = getItem(position).getString("wa_konsumen");
 
             TextView lkPem = convertView.findViewById(R.id.lk_idPem);
             TextView lkNama= convertView.findViewById(R.id.lk_nmKon);
             TextView lkAlamat= convertView.findViewById(R.id.lk_Alamat);
+            TextView lkTgl = convertView.findViewById(R.id.lk_tanggalDepan);
             ImageView lkWa = convertView.findViewById(R.id.chatKonsumen);
 
 
             lkPem.setText("ID Pembayaran: "+idPem);
             lkNama.setText(" "+namaKon);
             lkAlamat.setText(" "+alamaKon);
+            lkTgl.setText(" "+tglP);
 
             lkWa.setOnClickListener(new View.OnClickListener() {
                 @Override

@@ -15,13 +15,14 @@
 
 <body>
     <!-- Page Preloder -->
-    <div id="preloder">
+    {{-- <div id="preloder">
         <div class="loader"></div>
-    </div>
+    </div> --}}
 
     <!-- Humberger Begin -->
-    {{--@include('konsumen.partials.humberger')--}}
+    @include('konsumen.partials.humberger')
     <!-- Humberger End -->
+
 
     <!-- Header Section Begin -->
     @include('konsumen.partials.header')
@@ -58,22 +59,37 @@
                                 <input type="text" name='cari' placeholder="Mau belanja apa?">
                                 <button type="submit" class="site-btn">CARI</button>
                             </form>
+
                         </div>
+
                         <div class="hero__search__phone">
-                            <div class="hero__search__phone__icon">
+                            {{-- <div class="hero__search__phone__icon">
                                 <i class="fa fa-phone"></i>
+                            </div> --}}
+                            <div class="hero__search__phone__icon">
+                                <a href="{{route('keranjang.index')}}"><img src="{{asset('konsumen_theme')}}/img/keranjang2.png" width="80%"></a>
                             </div>
+
                             <div class="hero__search__phone__text">
                                 <h5>081267597033</h5>
                                 <span>8.00 - 18.00 Wib</span>
+
                             </div>
+
                         </div>
+
+
+
                     </div>
+
                     {{-- content --}}
                     @yield('content')
                 </div>
+
             </div>
         </div>
+
+
     </section>
     <!-- Hero Section End -->
 
@@ -104,6 +120,22 @@
 
     <!-- Js Plugins -->
 @include('konsumen.partials.script')
+
+
+<script type="text/javascript">
+    (function () {
+        var options = {
+            whatsapp: "+6281267597033", // WhatsApp number
+            call_to_action: "Kirim Pesan", // Call to action
+            position: "right", // Position may be 'right' or 'left'
+        };
+        var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
+        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+        s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+        var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+    })();
+</script>
+
 
 
 

@@ -7,10 +7,10 @@
 <!--    android:background="@drawable/bg22">-->
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="@drawable/bg22">
+    android:background="@color/divider">
 
 <!--    <View-->
 <!--        android:layout_width="match_parent"-->
@@ -20,6 +20,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="40dp"
+        android:orientation="horizontal"
         android:layout_marginTop="0dp">
 
         <TextView
@@ -30,7 +31,6 @@
             android:gravity="center"
             android:text="1"
             android:textColor="@color/colorfont"
-            android:textSize="15sp"
             android:textStyle="bold" />
 
         <TextView
@@ -41,7 +41,6 @@
             android:gravity="center"
             android:text="Muthia"
             android:textColor="@color/colorfont"
-            android:textSize="15sp"
             android:textStyle="bold" />
 
         <TextView
@@ -52,7 +51,6 @@
             android:gravity="center"
             android:text="3"
             android:textColor="@color/colorfont"
-            android:textSize="15sp"
             android:textStyle="bold" />
 
         <TextView
@@ -63,7 +61,6 @@
             android:gravity="center"
             android:text="1000"
             android:textColor="@color/colorfont"
-            android:textSize="15sp"
             android:textStyle="bold" />
 
         <TextView
@@ -74,7 +71,7 @@
             android:gravity="center"
             android:text="21 September 2020"
             android:textColor="@color/colorfont"
-            android:textSize="9sp"
+            android:textSize="9dp"
             android:textStyle="bold" />
     </LinearLayout>
 

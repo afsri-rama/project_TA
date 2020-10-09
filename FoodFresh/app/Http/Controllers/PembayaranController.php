@@ -28,9 +28,10 @@ class PembayaranController extends Controller
 
         foreach ($keranjang as $key => $value) {
             $totalSemua += $value->total_harga;
-            $statusProdukBaru = 2;
+            // $statusProdukBaru = 2;
         }
-        return view('konsumen.pembayaran', compact('keranjang', 'totalSemua', 'statusProdukBaru','pembayaran'));
+
+        return view('konsumen.pembayaran', compact('keranjang', 'totalSemua','pembayaran'));
     }
 
     /**

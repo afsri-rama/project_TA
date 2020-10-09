@@ -23,4 +23,6 @@ class Pemesanan extends Model
     public function kurir(){
         return $this->belongsTo('App\Kurir', 'id_kurir');
     }
+
+
 }

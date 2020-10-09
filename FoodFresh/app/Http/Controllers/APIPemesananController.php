@@ -9,7 +9,8 @@ class APIPemesananController extends Controller
 {
     public function index()
     {
-        $pemesanan = Pemesanan::all();
+        $pemesanan = Pemesanan::orderByDesc('tgl_pemesanan')->get();
+        //  $pemesanan = Pemesanan::all();
 
 
         $data  = [];

@@ -12,10 +12,12 @@ class APIDistributorController extends Controller
 {
     public function index(){
         $data = [] ;
-        $distributor = Distributor::all();
+        $distributor = Distributor::orderByDesc('created_at')->get();
+        // $distributor = Distributor::all();
         foreach ($distributor as $key => $value) {
             $data[$key] = $value ;
-            $pembelian = Pembelian::all();
+            $pembelian = Pembelian::orderByDesc('created_at')->get();
+            // $pembelian = Pembelian::all();
             $dataPembelian = [] ;
             foreach ($pembelian as $keyPembeli => $valuePembeli) {
                 $keranjang= $valuePembeli->keranjang ;
