@@ -15,7 +15,7 @@ class HistoriController extends Controller
         $user = Auth::user();
         $keranjang=Keranjang::all();
         $konsumen = $user->konsumen ;
-        $keranjang = Keranjang::where('id_konsumen', $konsumen->id)->get();
+        $keranjang = Keranjang::latest()->where('id_konsumen', $konsumen->id)->get();
 
         return view('konsumen.histori', compact('keranjang'));
     }
