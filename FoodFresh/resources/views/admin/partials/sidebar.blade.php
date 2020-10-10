@@ -21,51 +21,16 @@
         </li>
 
         <li class="nav-item has-treeview">
-            <a href="{{route('level.index')}}" class="nav-link">
+            <a href="{{route('keranjang_admin.index')}}" class="nav-link">
                 <i></i>
-                <p> Level Users </p>
+                <p>Keranjang</p>
             </a>
         </li>
 
         <li class="nav-item has-treeview">
-            <a href="{{route('user.index')}}" class="nav-link">
+            <a href="{{route('pemesanan.index')}}" class="nav-link">
                 <i></i>
-                <p> Users </p>
-            </a>
-        </li>
-
-        <li class="nav-item has-treeview">
-            <a href="{{route('distributor.index')}}" class="nav-link">
-                <i></i>
-                <p> Distributor </p>
-            </a>
-        </li>
-
-        <li class="nav-item has-treeview">
-            <a href="{{route('kurir.index')}}" class="nav-link">
-                <i></i>
-                <p> Kurir </p>
-            </a>
-        </li>
-
-        <li class="nav-item has-treeview">
-            <a href="{{route('konsumen.index')}}" class="nav-link">
-                <i></i>
-                <p> List Konsumen</p>
-            </a>
-        </li>
-
-        <li class="nav-item has-treeview">
-            <a href="{{route('kategori.index')}}" class="nav-link">
-                <i></i>
-                <p> Kategori Produk </p>
-            </a>
-        </li>
-
-        <li class="nav-item has-treeview">
-            <a href="{{route('produk.index')}}" class="nav-link">
-                <i></i>
-                <p>Produk</p>
+                <p>Pemesanan</p>
             </a>
         </li>
 
@@ -77,16 +42,51 @@
         </li>
 
         <li class="nav-item has-treeview">
-            <a href="{{route('pemesanan.index')}}" class="nav-link">
+            <a href="{{route('konsumen.index')}}" class="nav-link">
                 <i></i>
-                <p>Pemesanan</p>
+                <p> List Konsumen</p>
             </a>
         </li>
 
         <li class="nav-item has-treeview">
-            <a href="{{route('keranjang_admin.index')}}" class="nav-link">
+            <a href="{{route('kurir.index')}}" class="nav-link">
                 <i></i>
-                <p>Keranjang</p>
+                <p> Kurir </p>
+            </a>
+        </li>
+
+        <li class="nav-item has-treeview">
+            <a href="{{route('distributor.index')}}" class="nav-link">
+                <i></i>
+                <p> Distributor </p>
+            </a>
+        </li>
+
+        <li class="nav-item has-treeview">
+            <a href="{{route('produk.index')}}" class="nav-link">
+                <i></i>
+                <p>Produk</p>
+            </a>
+        </li>
+
+        <li class="nav-item has-treeview">
+            <a href="{{route('kategori.index')}}" class="nav-link">
+                <i></i>
+                <p> Kategori Produk </p>
+            </a>
+        </li>
+
+         <li class="nav-item has-treeview">
+            <a href="{{route('user.index')}}" class="nav-link">
+                <i></i>
+                <p> Users </p>
+            </a>
+        </li>
+
+        <li class="nav-item has-treeview">
+            <a href="{{route('level.index')}}" class="nav-link">
+                <i></i>
+                <p> Level Users </p>
             </a>
         </li>
 
