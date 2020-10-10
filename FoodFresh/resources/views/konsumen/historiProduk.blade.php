@@ -15,7 +15,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($dataProduk as $item)
+                                @foreach ($dataProduk as $key => $item)
                                     <tr>
                                         <td>
                                             {{$item->nama_produk}}
@@ -23,12 +23,12 @@
 
                                          <td width="25%">
                                             <!-- Button trigger modal -->
-                                            <button type="button" class="btn btn-sm btn-default" data-toggle="modal" data-target="#exampleModalScrollable">
+                                            <button type="button" class="btn btn-sm btn-default" data-toggle="modal" data-target="#histori-produk-{{$key}}">
                                                 <img src="{{asset('app/'.$item->gambar_produk)}}" alt="" width="100%" />
                                             </button>
 
                                             <!-- Modal -->
-                                            <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+                                            <div class="modal fade" id="histori-produk-{{$key}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
                                                 <div class="modal-dialog modal-dialog-scrollable" role="document">
                                                     <div class="modal-content">
                                                     <div class="modal-header">

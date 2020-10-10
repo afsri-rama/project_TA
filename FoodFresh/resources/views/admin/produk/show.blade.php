@@ -22,17 +22,17 @@
                 $index = 1 ;
             @endphp
 
-            @foreach ($produk as $item)
+            @foreach ($produk as $key => $item)
             <tr>
                  <td  width='5%'> 
                         
                         <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-sm btn-default" data-toggle="modal" data-target="#exampleModalScrollable">
+                        <button type="button" class="btn btn-sm btn-default" data-toggle="modal" data-target="#produk-modal-{{$key}}">
                             <img src="{{asset('app/'. $item->gambar_produk)}}" width="100%" alt="{{ $item->nama_produk }}"> 
                         </button>
 
                         <!-- Modal -->
-                        <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+                        <div class="modal fade" id="produk-modal-{{$key}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-scrollable" role="document">
                                 <div class="modal-content">
                                 <div class="modal-header">

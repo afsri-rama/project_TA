@@ -20,7 +20,7 @@
             @php
                 $index = 1 ;
             @endphp
-            @foreach ( $pembayaran  as $item)
+            @foreach ( $pembayaran  as $key => $item)
                 <tr>
                     <td style="width: 2% ;"> {{$index++}} </td>
                     <td> {{$item->id}} </td>
@@ -30,12 +30,12 @@
                     <td  width='5%'> 
                         
                         <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-sm btn-default" data-toggle="modal" data-target="#exampleModalScrollable">
+                        <button type="button" class="btn btn-sm btn-default" data-toggle="modal" data-target="#pambayaran-modal-{{$key}}">
                             <img src="{{asset('app/'. $item->bukti_pembayaran)}}"  width="100%" alt="{{ $item->konsumen->nama_konsumen }}">
                         </button>
 
                         <!-- Modal -->
-                        <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+                        <div class="modal fade" id="pambayaran-modal-{{$key}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-scrollable" role="document">
                                 <div class="modal-content">
                                 <div class="modal-header">
