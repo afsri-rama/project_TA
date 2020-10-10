@@ -21,7 +21,7 @@ class HistoriPesanController extends Controller
                         ->get();
         
         foreach ($pemesanan as $key => $value) {
-           if($key == 'status_pemesanan') $pemesanan[$key]['status_pemesanan'] = $value['status_pemesanan'] == 1 ? 'Pemesanan' : 'Prosess' ; 
+           $pemesanan[$key]['status_pemesanan'] = $value['status_pemesanan'] == 1 ? 'Pemesanan' : 'Prosess' ; 
         }
 
         return view('konsumen.historiPesan', compact('pemesanan'));
