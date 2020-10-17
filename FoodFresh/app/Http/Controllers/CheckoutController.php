@@ -92,6 +92,19 @@ class CheckoutController extends Controller
         $user = Auth::user();
         $konsumen = $user->konsumen;
         $keranjang = Keranjang::where('id_konsumen', $konsumen->id)->where('status_produk', Keranjang::$STATUS_PRODUK_DIPILIH);
+        
+        $statDeleteProduk = false ;
+        foreach ($keranjang->get() as $key => $value) {
+            if(strtotime($value->created_at . ' +1 day') <= strtotime(date('Y-m-d H:i:s'))){
+                $statDeleteProduk = true ;
+                break;
+            }
+        }
+
+        if($statDeleteProduk) {
+            $keranjang->delete();
+            return redirect()->route('produk_konsumen.index')->withWarning('Semua data keranjang kamu telah di hapus, diakibatkan kamu terlambat dalam proses pembayaran produk, mohon pilih produk kamu lagi deh');
+        }
 
         $statusProdukBaru = Keranjang::$STATUS_MENUNGGU_PEMBAYARAN;
         $keranjang->update(['status_produk' => $statusProdukBaru]);

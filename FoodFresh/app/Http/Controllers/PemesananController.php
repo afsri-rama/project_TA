@@ -13,14 +13,22 @@ class PemesananController extends Controller
 {
     public function index(Request $request)
     {
-        // $pemesanan = Pemesanan::all();
 
-
-         $pemesanan = new Pemesanan();
-        if(isset($request->pemesanan)) $pemesanan = Pemesanan::where('tgl_pemesanan', $request->tgl_pemesanan);
+        $pemesanan = new Pemesanan();
+        if(isset($request->tanggal)){
+            $pemesanan = $pemesanan->where('tgl_pemesanan', $request->tanggal) ;
+        }
 
         $pemesanan = $pemesanan->get();
         return view('admin.pemesanan.show', compact('pemesanan'));
+
+        // $pemesanan = Pemesanan::all();
+
+        //  $pemesanan = new Pemesanan();
+        // if(isset($request->pemesanan)) $pemesanan = Pemesanan::where('tgl_pemesanan', $request->tgl_pemesanan);
+
+        // $pemesanan = $pemesanan->get();
+        // return view('admin.pemesanan.show', compact('pemesanan'));
 
         // $start = Carbon::now()->startOfMonth()->format('Y-m-d H:i:s');
         // $end = Carbon::now()->endOfMonth()->format('Y-m-d H:i:s');

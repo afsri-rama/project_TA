@@ -6,7 +6,8 @@
     <form action="{{ route('pemesanan.index') }}" name="cari" method="get">
 			<label>Pilih Tanggal</label>
 			<input type="date" name="tanggal">
-			<input type="submit" class="btn btn-xs btn-info" value="FILTER">
+            <input type="submit" class="btn btn-xs btn-info" value="FILTER">
+            <a href="?tanggal=" class="btn btn-xs btn-info" > SEMUA </a>
 	</form>
     <table class="table">
         <thead>

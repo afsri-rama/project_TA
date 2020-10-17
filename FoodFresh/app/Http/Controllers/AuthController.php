@@ -51,6 +51,7 @@ class AuthController extends Controller
             'email'=>['required', 'email', 'unique:users'],
             'username'=>['required', 'unique:users'],
             'password'=>['required'],
+            'CaptchaCode' => 'required|valid_captcha'
         ]);
 
         $dataUser = [
