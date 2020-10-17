@@ -15,7 +15,7 @@
                                     <th></th>
                                 </tr>
                             </thead>
-                                @foreach ($pemesanan as $item)
+                                @foreach ($pemesanan as  $key => $item)
                                     <tr>
                                         <td>
                                             <center> {{$item->tgl_pemesanan}}</center>
@@ -30,12 +30,12 @@
 
                                         <td>
                                             <!-- Button trigger modal -->
-                                            <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#exampleModalScrollable">
+                                            <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#histori-pesan-{{$key}}">
                                             View Bukti
                                             </button>
 
                                             <!-- Modal -->
-                                            <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+                                            <div class="modal fade" id="histori-pesan-{{$key}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
                                             <div class="modal-dialog modal-dialog-scrollable" role="document">
                                                 <div class="modal-content">
                                                 <div class="modal-header">
@@ -55,7 +55,7 @@
                                             </div>
                                         </td>
 
-                                        
+
                                         <td>
                                             <a href="{{route('historiPesan.show', $item->id_pembayaran)}}" class="btn btn-sm btn-success"> Cek Produk </a>
                                         </td>

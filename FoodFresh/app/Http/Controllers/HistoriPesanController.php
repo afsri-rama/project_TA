@@ -19,9 +19,9 @@ class HistoriPesanController extends Controller
                         ->select('pemesanan.tgl_pemesanan', 'pemesanan.status_pemesanan', 'pemesanan.id_pembayaran', 'pembayaran.bukti_pembayaran', 'pembayaran.total_pembayaran')
                         ->where('pembayaran.id_konsumen', $konsumen->id)
                         ->get();
-        
+
         foreach ($pemesanan as $key => $value) {
-           $pemesanan[$key]['status_pemesanan'] = $value['status_pemesanan'] == 1 ? 'Pemesanan' : 'Prosess' ; 
+           $pemesanan[$key]['status_pemesanan'] = $value['status_pemesanan'] == 1 ? 'Pemesanan' : 'Prosess' ;
         }
 
         return view('konsumen.historiPesan', compact('pemesanan'));

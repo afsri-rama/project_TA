@@ -46,13 +46,12 @@ public class DetailPesananAdapter extends BaseAdapter {
             String namaPro = getItem(position).getString("nama_produk");
             String totPro = getItem(position).getString("total_produk");
             String harga = getItem(position).getString("harga_produk");
-            String des = getItem(position).getString("des_produk");
 
             TextView dcNm = convertView.findViewById(R.id.dc_namaPro);
             TextView dcTot = convertView.findViewById(R.id.dc_totPro);
             TextView dcHg = convertView.findViewById(R.id.dc_totHar);
 
-            dcNm.setText(" "+namaPro+" ( "+des+" )");
+            dcNm.setText(" "+namaPro);
             dcTot.setText(" "+totPro);
             dcHg.setText(" "+harga);
 

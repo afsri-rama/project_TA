@@ -40,12 +40,9 @@
                                         @if ($item->status_produk == 3)
                                            Sudah Dibayar
 
-                                        @elseif ($item->status_produk == 2)
-                                           Menunggu pembayaran
-                                           <a href="{{route('pembayaran.index')}}" button type="submit" class="site-btn" >Upload Bukti</button></a>
                                         @else
-                                            Produk Masih Dikeranjang
-                                            <a href="{{route('pembayaran.index')}}" button type="submit" class="site-btn" >Upload Bukti</button></a>
+                                            Menunggu pembayaran
+                                           <a href="{{route('pembayaran.index')}}" button type="submit" class="site-btn" >Upload Bukti</button></a>
                                         @endif
                                     </td>
                                     <td class="shoping__cart__item__close">

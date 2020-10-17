@@ -6,8 +6,12 @@
                         <div class="header__top__left">
                             <ul>
                                 <li><i class="fa fa-envelope"></i> freshfood@gmail.com</li>
-                                <li>Pesanan Anda Akan Kami Antar Langsung Ke Alamat </li>
+                                <li>Hanya Untuk Wilayah Kota Padang !
+                                    <h6 style="font-size: 10px">Pesanan Anda Akan Kami Antar Langsung Ke Alamat</h6>
+                                </li>
+
                             </ul>
+
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6">
@@ -33,9 +37,9 @@
                             @endif --}}
 
                             @if (isset(auth()->user()->id))
-                                {{-- <div class="header__top__right__auth">
-                                    <i class="fa fa-user"></i> {{auth()->user()->konsumen->nama_konsumen}}
-                                </div> --}}
+                                <div class="header__top__right__auth">
+                                   <a href="{{route('profil.index')}}"> <i class="fa fa-user"></i></a>{{--  {{auth()->user()->konsumen->nama_konsumen}}--}}
+                                </div>
                                 |
                                 <div class="header__top__right__auth">
                                     <a href="{{route('logout')}}"> Logout </a>

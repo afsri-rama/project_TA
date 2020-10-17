@@ -41,6 +41,7 @@ Route::group(['middleware' => ['auth', 'level-rule:' . Level::$LEVEL_KONSUMEN]],
     Route::resource('kontak', 'KontakController');
     Route::resource('histori', 'HistoriController');
     Route::resource('historiPesan', 'HistoriPesanController');
+    Route::resource('profil', 'ProfilController');
 
 });
 

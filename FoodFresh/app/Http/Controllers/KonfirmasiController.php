@@ -75,9 +75,11 @@ class KonfirmasiController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
+            // 'bukti_pembayaran' => ['required|file|image|mimes:jpeg,png,jpg|max:2048'],
             'bukti_pembayaran' => ['required'],
-            'tgl_pembayaran' => ['required']
+            'tgl_pembayaran' => ['required|image|max:2048']
         ]);
+
 
         $user = Auth::user();
         $konsumen = $user->konsumen ;

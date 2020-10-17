@@ -42,8 +42,8 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="labelinput">Berat</label>
-                    <input type="text" value="{{$produk->des_produk}}" placeholder="Berat" name='des_produk' class="form-control {{ $errors->has('des_produk') ? 'is-invalid' : '' }}">
+                    <label for="labelinput">Deskripsi</label>
+                    <textarea style=" height:200px" type="text" value="{{$produk->des_produk}}" placeholder="Berat" name='des_produk' class="form-control {{ $errors->has('des_produk') ? 'is-invalid' : '' }}"></textarea>
                     <span class="text-danger">{{ $errors->first('des_produk') }}</span>
                 </div>
 

@@ -3,6 +3,11 @@
     PEMESANAN
 @endsection
 @section('content')
+    <form action="{{ route('pemesanan.index') }}" name="cari" method="get">
+			<label>Pilih Tanggal</label>
+			<input type="date" name="tanggal">
+			<input type="submit" class="btn btn-xs btn-info" value="FILTER">
+	</form>
     <table class="table">
         <thead>
             <tr>
@@ -16,10 +21,11 @@
             </tr>
         </thead>
         <tbody>
+
             @php
                 $index = 1 ;
             @endphp
-            @foreach ( $pemesanan  as $item)
+            @forelse ($pemesanan as $item)
                 <tr>
                     <td style="width: 2% ;"> {{$index++}} </td>
                     <td> {{$item->pembayaran->konsumen->nama_konsumen}} </td>
@@ -30,7 +36,24 @@
                         <a href="{{route('pemesanan.edit', $item->id)}}" class="btn btn-xs btn-info"> ✏ EDIT </a>
                     </td>
                 </tr>
-            @endforeach
+
+            @empty
+                <tr>
+                    <td colspan="6" class="text-center">Tidak ada data</td>
+                </tr>
+            @endforelse
+            {{-- @foreach ( $pemesanan  as $item)
+                <tr>
+                    <td style="width: 2% ;"> {{$index++}} </td>
+                    <td> {{$item->pembayaran->konsumen->nama_konsumen}} </td>
+                    <td> {{$item->tgl_pemesanan}} </td>
+                    <td> {{{$item->kurir->nama_kurir ?? 'Pilih Kurir'}}} </td>
+                    <td> {{$item->status_pemesanan ? 'Selesai' : 'Proses'}} </td>
+                    <td>
+                        <a href="{{route('pemesanan.edit', $item->id)}}" class="btn btn-xs btn-info"> ✏ EDIT </a>
+                    </td>
+                </tr>
+            @endforeach --}}
         </tbody>
     </table>
 
